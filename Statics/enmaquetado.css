@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.barraLateral{
+    background-color: rgb(37, 36, 36);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 95%;
+    width: 35%;
+}
+
+.contenedor{
+    background-color: rgb(37, 36, 36);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 95%;
+    width: 65%;
+
+}
