@@ -1,0 +1,59 @@
+body {
+  background-color: #2F2F2F;
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+
+}
+
+.fondo {
+  flex: 1;
+  background-image: url('FondoInicio.jpg');
+  margin-top: 5%;
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+}
+
+.barraLateral {
+  background-color: #424040; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  width: 10%;
+  padding: 20px 10px;
+  gap: 10px;
+  
+}
+.contenedor{
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    border-radius: 15%;
+}
+@font-face {
+  font-family: "Jersey10";
+  src: url("Jersey10-Regular.ttf") format("truetype");
+}
+
+.boton{
+    width: 60%;
+    gap: 10px;
+    padding: 10px;
+    background: #555354;
+    box-shadow: 0px 4px 4px 10px rgba(0, 0, 0, 0.25);
+    color: aliceblue;
+    text-shadow: rgb(225, 107, 221);
+    font-family: Jersey10;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 69px;
+}
+
+

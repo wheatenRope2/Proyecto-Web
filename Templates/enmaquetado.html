@@ -7,39 +7,42 @@
     <title>Paginita web</title>
 </head>
 <body>
-    <nav> <input type="text" id="buscador" name="buscador" placeholder="Buscar"> </nav><br>
     <aside class="barraLateral">
         <button id="botonInicio" class="boton">Inicio</button>
         <button id="botonPlaylist" class="boton">Playlist</button>
-        <button id="botonMiMix" class="boton">Mi Mix</button>
         <button id="ajustes" class="boton">Ajustes</button>
         <button id="creditos" class="boton">Créditos</button>
         <br><br>
         <button id="reproductor" class="botonDesplegable">^</button>
     </aside>
-    <div class="contenedor" id="contenedorInicio" style="display: none;">
-        <main>
-            <article>Articulo 1</article>
-            <article>Articulo 2</article>
-        </main>
-        <button id="menuUsuario" class="botonDesplegable">^</button>
-        <aside id="menuUsuario">
-            Menú usuario
-        </aside>
-    </div>
-    <div class="contenedor" id="contenedorPlaylist" style="display: block;">
-        <main>
-            <article>
-                <section> Imagen album</section><br>
-                <section> Nombre de canción </section><br>
-                <section class="barraReproductora"> Barra de reproductor </section>
-            </article>
-        </main>
-        <aside id="playlist">
+    <nav> <input style="display: none;" type="text" id="buscador" name="buscador" placeholder="Buscar"> </nav><br>
+    <div class ="fondo">
+        <div class="contenedor" id="contenedorInicio" style="display: none;">
+            <main>
+                <article>Articulo 1</article>
+                <article>Articulo 2</article>
+            </main>
+            <button id="menuUsuario" class="botonDesplegable">^</button>
+            <aside id="menuUsuario">
+                Menú usuario
+            </aside>
+        </div>
+        <div class="contenedor" id="contenedorPlaylist" style="display: block;">
+            <main>
+                <article>
+                    <section> Imagen album</section>
+                    <br>
+                    <section> Nombre de canción </section>
+                    <br>
+                    <section class="barraReproductora"> Barra de reproductor </section>
+                </article>
+            </main>
+            <aside id="playlist">
 
-        </aside>
+            </aside>
+        </div>
     </div>
-    
+
 </body>
 <script src="../Dynamics/enmaquetado.js"></script>
 </html>
