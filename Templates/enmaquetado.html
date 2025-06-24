@@ -10,36 +10,32 @@
     <aside class="barraLateral">
         <button id="botonInicio" class="boton">Inicio</button>
         <button id="botonPlaylist" class="boton">Playlist</button>
-        <button id="ajustes" class="boton">Ajustes</button>
+        <button id="ajustes" class="boton">Buscador</button>
         <button id="creditos" class="boton">Créditos</button>
-        <br><br>
-        <button id="reproductor" class="botonDesplegable">^</button>
+
+        <div class="videoLyrics">
+            <iframe src="https://www.youtube.com/embed/CD-E-LDc384" class="video"></iframe> <!-- Después de la diagonal de "embed/", se tienen que colocar el "link" que tenemos en la base de datos -->
+        </div>
+
+        <div class="reproductor">
+            <div class="controlesReproductor">
+                <button>⏮</button>
+                <button>⏯</button>
+                <button>⏭</button>
+            </div>
+        </div>
     </aside>
     <nav> <input style="display: none;" type="text" id="buscador" name="buscador" placeholder="Buscar"> </nav><br>
     <div class ="fondo">
-        <div class="contenedor" id="contenedorInicio" style="display: none;">
-            <main>
-                <article>Articulo 1</article>
-                <article>Articulo 2</article>
-            </main>
-            <button id="menuUsuario" class="botonDesplegable">^</button>
-            <aside id="menuUsuario">
-                Menú usuario
-            </aside>
-        </div>
-        <div class="contenedor" id="contenedorPlaylist" style="display: block;">
-            <main>
-                <article>
-                    <section> Imagen album</section>
-                    <br>
-                    <section> Nombre de canción </section>
-                    <br>
-                    <section class="barraReproductora"> Barra de reproductor </section>
-                </article>
-            </main>
-            <aside id="playlist">
-
-            </aside>
+        <section class="contenedorInicio" id="contenedorInicio" style="display: block;">
+            <article class = "carrusel">Aqui van a ir las canciones en carrusel </article>
+            <article class = "albums">Aqui van a ir los albums</article>
+            <article class = "generos">Aqui van a ir los generos</article>
+        </section>
+        <div class="contenedorPlaylist" id="contenedorPlaylist" style="display: none;">
+            <button id="agregarPlaylist" >Agregar Playlist</button>
+            <button id="eliminarPlaylist" >Eliminar Playlist</button>
+            <div id="aparicionPlaylist"></div>
         </div>
     </div>
 
