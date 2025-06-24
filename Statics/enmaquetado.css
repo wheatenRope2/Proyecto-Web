@@ -1,0 +1,66 @@
+body {
+  background-color: #2F2F2F;
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+
+}
+
+.fondo {
+  flex: 1;
+  background-image: url('FondoInicio.jpg');
+  margin-top: 5%;
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+}
+
+.barraLateral {
+  background-color: #424040; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  width: 180px;
+  padding-top: 20px;
+  gap: 10px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 5px #000;
+}
+.contenedor{
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    border-radius: 15%;
+}
+@font-face {
+  font-family: "Jersey10";
+  src: url("Jersey10-Regular.ttf") format("truetype");
+}
+
+.boton{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 160px;
+  height: 48px;
+  padding: 0 12px;
+  background-color: #6d6d6d;
+  color: aliceblue;
+  font-family: "Jersey10";
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: left;
+  border-radius: 15px;
+  box-shadow: 0 0 5px #ffccff;
+  transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+.boton:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: #df47ca;
+}
