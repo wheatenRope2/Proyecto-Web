@@ -3,46 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Statics/enmaquetado.css">
-    <title>Paginita web</title>
+    <link rel="stylesheet" href="C:\Users\diego\Downloads\Buscador.css">
+    <title>Document</title>
 </head>
 <body>
-    <aside class="barraLateral">
-        <button id="botonInicio" class="boton">Inicio</button>
-        <button id="botonPlaylist" class="boton">Playlist</button>
-        <button id="ajustes" class="boton">Ajustes</button>
-        <button id="creditos" class="boton">Créditos</button>
-        <br><br>
-        <button id="reproductor" class="botonDesplegable">^</button>
-    </aside>
-    <nav> <input style="display: none;" type="text" id="buscador" name="buscador" placeholder="Buscar"> </nav><br>
-    <div class ="fondo">
-        <div class="contenedor" id="contenedorInicio" style="display: none;">
-            <main>
-                <article>Articulo 1</article>
-                <article>Articulo 2</article>
-            </main>
-            <button id="menuUsuario" class="botonDesplegable">^</button>
-            <aside id="menuUsuario">
-                Menú usuario
-            </aside>
-        </div>
-        <div class="contenedor" id="contenedorPlaylist" style="display: block;">
-            <main>
-                <article>
-                    <section> Imagen album</section>
-                    <br>
-                    <section> Nombre de canción </section>
-                    <br>
-                    <section class="barraReproductora"> Barra de reproductor </section>
-                </article>
-            </main>
-            <aside id="playlist">
+    <input type="text" id="buscador" placeholder="Buscar canción...">
+    <div id="lista-canciones"></div>
+    <br>
+    <div id="lista-artistas"></div>
+    <div class="video-responsive">
+        <header>
+        <i class="fa-brands fa-youtube" style="color: var(--primary-color);"></i>
+        </header>
+        <div id="player"></div>
 
-            </aside>
-        </div>
-    </div>
+        <div class="controls-bar">
+            <button id="playPausebtn">⏸️</button> 
+            <label for="volumeSlider">Volumen:</label>
+            <button type="text" id="muteBtn"></button> 
+            <input type="range" max="100"  id="volumeSlider">
 
+            <!-- <span class="time">
+                <span id="currentTime">00:00</span>
+                <span id="duration">00:00</span>
+            </span> -->
+            <label for="seekBar">Duracion:</label>
+            <input type="range" min="0" max="100" value="0" id="seekBar">
+        </div>
+        
+        <script src="https://youtube.com/iframe_api"></script>
+        <script src="..\dynamics\enmaqetado.js"></script>
+        </div>
 </body>
-<script src="../Dynamics/enmaquetado.js"></script>
 </html>
