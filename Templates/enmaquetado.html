@@ -7,36 +7,67 @@
     <title>Paginita web</title>
 </head>
 <body>
-    <aside class="barraLateral">
-        <button id="botonInicio" class="boton">Inicio</button>
-        <button id="botonPlaylist" class="boton">Playlist</button>
-        <button id="ajustes" class="boton">Ajustes</button>
-        <button id="creditos" class="boton">Créditos</button>
-        <br><br>
-        <button id="reproductor" class="botonDesplegable">^</button>
+    <!--Barra lateral-->
+    <aside id="barraLateral">
+        <section id="botonesLaterales">
+            <button id="botonInicio" class="boton">Inicio</button>
+            <button id="botonPlaylist" class="boton">Playlist</button>
+            <button id="busqueda" class="boton">Búsqueda</button>
+            <button id="creditos" class="boton">Créditos</button>
+        </section>
+        <section id="reproductor">
+            <article >
+                Contenedor para música y controles de reproducción
+                <div><img src="../Statics/FondoPlaylist.jpg"> </div>
+                <div id="botonesReproductor">
+                    <button class="botonesControl">1</button>
+                    <button class="botonPlayPausa">2</button>
+                    <button class="botonesControl">3</button>
+                    <br><br>
+                </div>
+                <div id="sliderReproductor">
+                    <input type="range" min="0" max="100" value="50" class="slider" id="slider">
+                </div>
+            </article>
+        </section>
     </aside>
-    <nav> <input style="display: none;" type="text" id="buscador" name="buscador" placeholder="Buscar"> </nav><br>
-    <div class ="fondo">
-        <div class="contenedor" id="contenedorInicio" style="display: none;">
-            <main>
-                <article>Articulo 1</article>
-                <article>Articulo 2</article>
-            </main>
-            <button id="menuUsuario" class="botonDesplegable">^</button>
-            <aside id="menuUsuario">
-                Menú usuario
-            </aside>
-        </div>
-        <div class="contenedor" id="contenedorPlaylist" style="display: block;">
-            <main>
-                <article>
-                    <section> Imagen album</section>
-                    <br>
-                    <section> Nombre de canción </section>
-                    <br>
-                    <section class="barraReproductora"> Barra de reproductor </section>
-                </article>
-            </main>
+
+    <!--Pantalla de Búsqueda-->
+    <section id="contenedorBuscador" style="display: none;"> 
+        <nav>
+            <label for="buscador">Buscar</label>
+            <input type="text" id="buscador" name="buscador" placeholder="Buscar">
+        </nav>
+        <br><br>
+        <p>¿Qué vas a escuchar hoy?</p>   
+    </section><br>
+
+    <!--Pantalla de Inicio--> 
+    <main>
+        <section class="contenedor" id="contenedorInicio">
+            <article>Canciones/carrusel</article>
+            <br><br>
+            <article>Artistas</article>
+            <br>
+            <article>Cassetes</article>
+        </section> 
+    </main>
+
+    <!--Pantalla de PlayList-->
+    <main>
+        <section id="contenedorPlaylist" class="contenedor" style="display: none;">
+            <article>
+                <h2>Mi playlist</h2>
+                <ul>
+                    
+                </ul>
+
+                <br><br>
+                <section class="barraReproductora"> Barra de reproductor </section>
+            </article>
+        </section>
+                
+    </main>
             <aside id="playlist">
 
             </aside>
