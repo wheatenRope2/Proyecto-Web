@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Statics/styles/login.css">
+    <title>Inicio de Sesión</title>
+</head>
+<body>
+    <main>
+        <!-- Registro -->
+        <section id="registro" style="display: none;">
+            <h2>Registrarse</h2>
+            <form id="form-registro">
+                <input type="text" id="reg-usuario" name="reg-usuario" placeholder="Nombre de usuario">
+                <span id="error-reg-usuario" name="error-reg-usuario" class="error-span"></span>
+
+                <input type="password" id="reg-password" name="reg-password" placeholder="Contraseña">
+                <span id="error-reg-password" name="error-reg-password" class="error-span"></span>
+
+                <input type="email" id="reg-email" name="reg-email" placeholder="Correo electrónico">
+                <span id="error-reg-email" name="error-reg-email" class="error-span"></span>
+
+                <button type="submit">Crear cuenta</button>
+                <p id="mensaje-exito" class="mensaje-exito"></p>
+            </form>
+            <p>¿Ya tienes una cuenta? <a href="#" id="mostrar-login">Inicia sesión</a></p>
+        </section>
+
+        <!-- Inicio de sesión -->
+        <section id="inicio">
+            <h2>Iniciar sesión</h2>
+            <form id="form-login">
+                <input type="text" id="login-usuario" name="login-usuario" placeholder="Nombre de usuario">
+                <span id="error-login-usuario" name="error-login-usuario" class="error-span"></span>
+
+                <input type="password" id="login-password" name="login-password" placeholder="Contraseña">
+                <span id="error-login-password" name="error-login-password" class="error-span"></span>
+                
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <p>¿No tienes una cuenta? <a href="#" id="mostrar-registro">Crea una aquí</a></p>
+        </section>
+    </main>
+
+    <script src="../Dynamics/js/login.js"></script>
+</body>
+</html>
