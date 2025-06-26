@@ -12,12 +12,16 @@ body{
 
 main{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 40px;
     background-color: #1c1c1c;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 0 10px #d059ff;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
 }
 
 form{
@@ -26,9 +30,11 @@ form{
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    width: 300px;
+    flex: 1 1 300px;
+    max-width: 100%;
     gap: 12px;
     box-shadow: 0 0 5px #d059ff;
+    box-sizing: border-box;
 }
 
 h2{
@@ -63,13 +69,14 @@ button:hover{
 }
 
 .error-span{
-    color: #a80909;
+    color: #ff5c8a;
     font-size: 0.85rem;
     min-height: 1em;
+    font-weight: 500;
 }
 
 .mensaje-exito{
-    color: #1a9c1a;
+    color: #6be66b;
     font-weight: bold;
     font-size: 0.95rem;
     margin-top: 10px;
@@ -79,6 +86,7 @@ button:hover{
 
 a{
     color: #df47ca;
+    text-decoration: none;
     font-weight: bold;
     transition: color 0.2s ease-in-out;
 }
