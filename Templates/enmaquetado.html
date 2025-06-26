@@ -18,8 +18,23 @@
         </section>
         <section id="reproductor">
             <article >
-                Contenedor para música y controles de reproducción
-                <div id="reproductorVideo">Video</div>
+                <div id="reproductorVideo">
+                    <div id="player"></div> <!-- Contenedor del reproductor de YouTube -->
+                </div>
+
+                        <div class="controls-bar">
+                        <button id="playPausebtn">⏸️</button> 
+                        <label for="volumeSlider">Volumen:</label>
+                        <button type="text" id="muteBtn"></button> 
+                        <input type="range" max="100"  id="volumeSlider">
+
+                        <!-- <span class="time">
+                            <span id="currentTime">00:00</span>
+                            <span id="duration">00:00</span>
+                        </span> -->
+                        <label for="seekBar">Duracion:</label>
+                        <input type="range" min="0" max="100" value="0" id="seekBar">
+                        </div>  
                 <div id="botonesReproductor">
                     <button class="botonesControl">1</button>
                     <button class="botonPlayPausa">2</button>
@@ -30,6 +45,7 @@
                     <input type="range" min="0" max="100" value="50" class="slider" id="slider">
                 </div>
             </article>
+            
         </section>
     </aside>
 
@@ -45,23 +61,10 @@
                 <header>
                 <i class="fa-brands fa-youtube" style="color: var(--primary-color);"></i>
                 </header>
-                <div id="player"></div>
 
-                <div class="controls-bar">
-                    <button id="playPausebtn">⏸️</button> 
-                    <label for="volumeSlider">Volumen:</label>
-                    <button type="text" id="muteBtn"></button> 
-                    <input type="range" max="100"  id="volumeSlider">
-
-                    <!-- <span class="time">
-                        <span id="currentTime">00:00</span>
-                        <span id="duration">00:00</span>
-                    </span> -->
-                    <label for="seekBar">Duracion:</label>
-                    <input type="range" min="0" max="100" value="0" id="seekBar">
-                </div>
                 
-                </div>
+                
+            </div>
         </nav>
         <br><br>
         <p>¿Qué vas a escuchar hoy?</p>   
@@ -105,7 +108,7 @@
         </section>
     </main>
 </body>
-    <script src="../Dynamics/JS/buscador.js"></script>
     <script src="https://youtube.com/iframe_api"></script>
+    <script src="../Dynamics/JS/buscador.js"></script>
     <script src="../Dynamics/JS/enmaquetado.js"></script>
 </html>

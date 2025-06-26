@@ -2,8 +2,8 @@
 const input = document.getElementById("buscador");
 const listaCancion = document.getElementById("lista-canciones");
 const listaArtista = document.getElementById("lista-artistas");
-console.log("hola");
-console.log(baseDatos);
+const datosBuscador = baseDatos;
+console.log(datosBuscador);
 
 function mostrarCanciones(filtradasCancion) 
 {
@@ -49,19 +49,19 @@ function mostrarArtistas(filtradosArtista)
 input.addEventListener("keyup", () => 
 {
   let textoCancion = input.value.toLowerCase();
-  let filtradasCancion = baseDatos.canciones.filter(c =>
+  let filtradasCancion = datosBuscador.canciones.filter(c =>
     c.nombre.toLowerCase().includes(textoCancion)
   );
     mostrarCanciones(filtradasCancion);
   let textoArtista = input.value.toLowerCase();
-  let filtradasArtista = baseDatos.artistas.filter(c =>
+  let filtradasArtista = datosBuscador.artistas.filter(c =>
     c.artista.toLowerCase().includes(textoArtista)
   );
   mostrarArtistas(filtradasArtista); 
 });
 
-mostrarCanciones(baseDatos.canciones);
-mostrarArtistas(baseDatos.artistas);
+mostrarCanciones(datosBuscador.canciones);
+mostrarArtistas(datosBuscador.artistas);
 
 
 let player;
