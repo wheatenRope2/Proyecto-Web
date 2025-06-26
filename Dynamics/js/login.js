@@ -63,7 +63,7 @@ document.getElementById("form-registro").addEventListener("submit", function(e){
     setCookie(nombre, valor, 7);
 
     limpiarFormulario("form-registro", ["error-reg-usuario", "error-reg-password", "error-reg-email"]);
-    mensajeExito.textContent = "Cuenta creada con éxito. Ya puedes iniciar sesión";
+    mensajeExito.textContent = "Cuenta creada con éxito. Ya puedes iniciar sesión.";
 });
 
 /* Inicio de sesión */

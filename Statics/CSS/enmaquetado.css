@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+  background-color: #2F2F2F;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+
+}
+
+@font-face {
+  font-family: "Jersey10";
+  src: url(../Fonts/Jersey10-Regular.ttf) format("truetype");
+}
+
+.boton{
+  color: aliceblue;
+  /* font-size: 1.5rem; */
+  
+}
+
+#barraLateral {
+    display: flex;
+    flex-direction: column;
+    background-color: #424040;
+    padding: 10px;
+    width: 30%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
+
+}
+
+#botonesLaterales {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 40%;
+    border-radius: 15px;
+    padding: 20px 0px 20px 0px;
+    background-color: #222222;
+
+}
+
+#botonesLaterales button {
+    width: 80%;
+    background-color: #6d6d6d;
+    color: white;
+    font-family: "Jersey10";
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #ffccff;
+    transition: transform 0.3s ease-in-out, background-color 0.2s;
+    text-align: center;
+}
+
+#botonesLaterales button:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: #df47ca;
+  color: black;
+}
+
+#reproductor {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 10px;
+    width: 100%;
+    height: 50%;
+    background-color: #df47ca;
+    font-family: "Jersey10";
+}
+
+#reproductorVideo {
+    display: flex;
+    background-color: brown;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+
+}
+
+#botonesReproductor {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: 15px;
+    padding: 1px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.botonesControl {
+    margin: 0 auto;
+    background-color: #424040;
+    border-radius: 15px;
+    border-style: none;
+    width: 20%;   
+}
+
+.botonPlayPausa {
+    background-color: rgb(182, 182, 11);
+    border-radius: 50%;
+    border-style: none;
+    width: 25%;
+    aspect-ratio: 1 / 1; 
+}
+
+#sliderReproductor {
+    display: flex;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 0 1.5em 0 1.5em;
+}
+
+#sliderReproductor input {
+    margin: 0 auto;
+    width: 100%;
+}
+
+section div img{
+    width: 100%;
+    height: 100%;
+}
+
+#pantallaInicio {
+    width: 100%;
+    height: 100%;
+}
+
+#contenedorInicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background-image: url(../Media/FondoInicio.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding: 10px;
+    
+}
+
+.contenedor {
+    width: 90%;
+    height: 30%;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
+
+
+
+#reproductor button:hover {
+    background-color: yellow;
+}
+
+#pantallaBuscador {
+    width: 100%;
+    height: 100%;
+    background-image: url(../Media/FondoBuscador.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    border-radius: 15px;
+}
+
+#contenedorBuscador {
+    width: 100%;
+    height: 20%;
+    color: white;
+}
+
+#contenedorBuscador, input {
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#contenedorPlaylist {
+    border-style: solid;
+    border-color: white;
+    color: rgb(37, 209, 37);
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+}
+
+#pantallaPlaylist {
+    width: 100%;
+    height: 100%;
+    background-image: url(../Media/FondoPlaylist.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    border-radius: 15px;
+}
+
+#pantallaCreditos {
+    width: 100%;
+    height: 100%;
+    background-image: url(../Media/FondoCreditos.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    border-radius: 15px;
+}
+
+.titulo-carrusel{
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: "Jersey10";
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.cuadro-cancion:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: #df47ca;
+}
+
+.boton-carrusel{
+    background-color: #df47ca;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: "Jersey10";
+    box-shadow: 0 0 5px #000;
+    margin: 0 5px;
+}
+
+.boton-carrusel:hover{
+    background-color: #a63f98;
+}
+
+.carrusel{
+    display: flex;
+    overflow: hidden;
+    gap: 15px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cuadro-cancion{
+    width: 80px;
+    height: 80px;
+    background-color: #555;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+    transition: all 0.4s ease;
+    flex-shrink: 0;
+}
+
+.envoltorio-carrusel{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 85px;
+    gap: 10px;
+}

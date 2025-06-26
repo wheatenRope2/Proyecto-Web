@@ -3,42 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Statics/enmaquetado.css">
+    <link rel="stylesheet" href="../Statics/CSS/enmaquetado.css">
+    <script src="../Dynamics/JS/baseDeDatos.js"></script>
     <title>Paginita web</title>
 </head>
 <body>
-    <aside class="barraLateral">
-        <button id="botonInicio" class="boton">Inicio</button>
-        <button id="botonPlaylist" class="boton">Playlist</button>
-        <button id="ajustes" class="boton">Buscador</button>
-        <button id="creditos" class="boton">Créditos</button>
-
-        <div class="videoLyrics">
-            <iframe src="https://www.youtube.com/embed/CD-E-LDc384" class="video"></iframe> <!-- Después de la diagonal de "embed/", se tienen que colocar el "link" que tenemos en la base de datos -->
-        </div>
-
-        <div class="reproductor">
-            <div class="controlesReproductor">
-                <button>⏮</button>
-                <button>⏯</button>
-                <button>⏭</button>
-            </div>
-        </div>
-    </aside>
-    <nav> <input style="display: none;" type="text" id="buscador" name="buscador" placeholder="Buscar"> </nav><br>
-    <div class ="fondo">
-        <section class="contenedorInicio" id="contenedorInicio" style="display: block;">
-            <article class = "carrusel">Aqui van a ir las canciones en carrusel </article>
-            <article class = "albums">Aqui van a ir los albums</article>
-            <article class = "generos">Aqui van a ir los generos</article>
+    <!--Barra lateral-->
+    <aside id="barraLateral">
+        <section id="botonesLaterales">
+            <button id="botonInicio" class="boton">Inicio</button>
+            <button id="botonPlaylist" class="boton">Playlist</button>
+            <button id="busqueda" class="boton">Búsqueda</button>
+            <button id="creditos" class="boton">Créditos</button>
         </section>
-        <div class="contenedorPlaylist" id="contenedorPlaylist" style="display: none;">
-            <button id="agregarPlaylist" >Agregar Playlist</button>
-            <button id="eliminarPlaylist" >Eliminar Playlist</button>
-            <div id="aparicionPlaylist"></div>
-        </div>
-    </div>
+        <section id="reproductor">
+            <article >
+                Contenedor para música y controles de reproducción
+                <div id="reproductorVideo">Video</div>
+                <div id="botonesReproductor">
+                    <button class="botonesControl">1</button>
+                    <button class="botonPlayPausa">2</button>
+                    <button class="botonesControl">3</button>
+                    <br><br>
+                </div>
+                <div id="sliderReproductor">
+                    <input type="range" min="0" max="100" value="50" class="slider" id="slider">
+                </div>
+            </article>
+        </section>
+    </aside>
 
+    <!--Pantalla de Búsqueda-->
+    <main id="pantallaBuscador" style="display: none;"> 
+        <nav id="contenedorBuscador">
+            <label for="buscador">Buscar</label>
+            <input type="text" id="buscador" name="buscador" placeholder="Buscar">
+            <div id="lista-canciones"></div>
+            <br>
+            <div id="lista-artistas"></div>
+                <div class="video-responsive">
+                <header>
+                <i class="fa-brands fa-youtube" style="color: var(--primary-color);"></i>
+                </header>
+                <div id="player"></div>
+
+                <div class="controls-bar">
+                    <button id="playPausebtn">⏸️</button> 
+                    <label for="volumeSlider">Volumen:</label>
+                    <button type="text" id="muteBtn"></button> 
+                    <input type="range" max="100"  id="volumeSlider">
+
+                    <!-- <span class="time">
+                        <span id="currentTime">00:00</span>
+                        <span id="duration">00:00</span>
+                    </span> -->
+                    <label for="seekBar">Duracion:</label>
+                    <input type="range" min="0" max="100" value="0" id="seekBar">
+                </div>
+                
+                </div>
+        </nav>
+        <br><br>
+        <p>¿Qué vas a escuchar hoy?</p>   
+    </main><br>
+
+    <!--Pantalla de Inicio--> 
+    <main id="pantallaInicio">
+        <section id="contenedorInicio">
+            <article class="contenedor" id="contenedorCanciones">
+                <h2 class="titulo-carrusel">Recomendaciones</h2>
+                <div class="envoltorio-carrusel">
+                    <button id="btnIzq" class="boton-carrusel">◀</button>
+                    <div id="carruselCanciones" class="carrusel">
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                    </div>
+                    <button id="btnDer" class="boton-carrusel">▶</button>
+                </div>
+            </article>
+            <br><br>
+            <article class="contenedor">Artistas</article>
+            <br><br>
+            <article class="contenedor">Cassetes</article>
+        </section> 
+    </main>
+
+    <!--Pantalla de PlayList-->
+    <main id="pantallaPlaylist" style="display: none;">
+        <section id="contenedorPlaylist" class="contenedor" style="display: none;">
+            <article>
+                <h2>Mi playlist</h2>
+                <ul>
+                    
+                </ul>
+
+                <br><br>
+            </article>
+        </section>
+                
+    </main>
+           
+    <!--Pantalla de Créditos-->
+    <main id="pantallaCreditos" style="display: none;">
+        <section id="contenedorCreditos" style="display: none;">
+            <article>
+                <h2>Créditos</h2>
+                <p>Desarrollado por: Tu Nombre</p>
+                <p>Fecha de creación: Fecha</p>
+                <p>Descripción del proyecto: Breve descripción del proyecto.</p>
+            </article>
+        </section>
+    </main>
 </body>
-<script src="../Dynamics/enmaquetado.js"></script>
+    <script src="../Dynamics/JS/buscador.js"></script>
+    <script src="https://youtube.com/iframe_api"></script>
+    <script src="../Dynamics/JS/enmaquetado.js"></script>
 </html>
