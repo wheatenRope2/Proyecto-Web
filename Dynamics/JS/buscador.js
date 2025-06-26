@@ -3,7 +3,6 @@ const input = document.getElementById("buscador");
 const listaCancion = document.getElementById("lista-canciones");
 const listaArtista = document.getElementById("lista-artistas");
 const datosBuscador = baseDatos;
-console.log(datosBuscador);
 
 function mostrarCanciones(filtradasCancion) 
 {
@@ -20,9 +19,9 @@ function mostrarCanciones(filtradasCancion)
     {
         if (player && typeof player.destroy === "function") 
         {
-            player.destroy();
+        //    player.destroy();
         }
-        onYouTubeIframeAPIReady(cancion.link)
+        player.loadVideoById(cancion.link);
         console.log(cancion.link);
     });
     listaCancion.appendChild(lic);
@@ -80,6 +79,7 @@ const currentTimeSpan = document.getElementById("currentTime");
 let currentVolume
 
 function onPlayerReady(event) {
+    player.loadVideoById(datosBuscador.canciones[0].link);
     duration = player.getDuration();
     player.mute(); // empieza en mute para evitar bloqueo de autoplay
     player.playVideo();
@@ -125,9 +125,9 @@ function onPlayerStateChange(event){
     }
 }
 
-function onYouTubeIframeAPIReady(cancion) {
+function onYouTubeIframeAPIReady() {
     player = new YT.Player("player", {
-        videoId: cancion,
+        videoId: "",
         playerVars: {
             controls: 0,
             modestbranding: 1,
