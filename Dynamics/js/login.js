@@ -6,6 +6,9 @@ document.getElementById("mostrar-registro").addEventListener("click", function(e
 
     /* Limpiar formulario de inicio */
     limpiarFormulario("form-login", ["error-login-usuario", "error-login-password"]);
+
+    /* Ocultar mensaje de éxito si existía */
+    document.getElementById("mensaje-exito").textContent = "";
 });
 
 document.getElementById("mostrar-login").addEventListener("click", function(e){
@@ -15,6 +18,9 @@ document.getElementById("mostrar-login").addEventListener("click", function(e){
 
     /* Limpiar fomulario de registro */
     limpiarFormulario("form-registro", ["error-reg-usuario", "error-reg-password", "error-reg-email"]);
+
+    /* Ocultar mensaje de éxito si existía */
+    document.getElementById("mensaje-exito").textContent = "";
 })
 
 /* Registro */
@@ -37,21 +43,34 @@ document.getElementById("form-registro").addEventListener("submit", function(e){
 
     let valido = true;
 
+    /* Validación de nombre de usuario */
     if(!nombre){
         errorUsuario.textContent = "Ingrese un nombre de usuario";
         valido = false;
+    }else if(/^[a-zA-Z0-9_]+$/.test(nombre)){
+        errorUsuario.textContent = "El nombre solo puede contener letras, números y guión bajo";
+        valido = false;
     }
 
+    /* Validación de contraseña */
     if(!pass){
         errorPass.textContent = "Ingrese una contraseña";
         valido = false;
-    }
-
-    if(!email){
-        errorEmail.textContent = "Ingrese un correo";
+    }else if(pass.length < 6){
+        errorPass.textContent = "La contraseña debe tener al menos 6 caracteres";
         valido = false;
     }
 
+    /* Validación de correo */
+    if(!email){
+        errorEmail.textContent = "Ingrese un correo";
+        valido = false;
+    }else if(!/^\S+@\S+\.\S+$/.test(email)){
+        errorEmail.textContent = "Ingrese un correo válido";
+        valido = false;
+    }
+
+    /* Validar que no se repita nombre de usuario */
     if(getCookie(nombre) !== null){
         errorUsuario.textContent = "Ese usuario ya existe";
         valido = false;
@@ -115,11 +134,11 @@ function setCookie(nombre, valor, dias){
 }
 
 function getCookie(nombre){
-    let cookies = document.cookie.split(";");
+    let cookies = document.cookie.split("; ");
     for(let i=0; i<cookies.length; i++){
-        let c = cookies[i].trim();
-        if(c.indexOf(nombre + "=") === 0)
-            return c.substring(nombre.length + 1);
+        if(cookies[i].startsWith(nombre + "=")){
+            return cookies[i].substring(nombre.length + 1);
+        }
     }
     return null;
 }
