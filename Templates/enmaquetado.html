@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Statics/enmaquetado.css">
+    <link rel="stylesheet" href="../Statics/CSS/enmaquetado.css">
     <title>Paginita web</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
         <section id="reproductor">
             <article >
                 Contenedor para música y controles de reproducción
-                <div><img src="../Statics/FondoPlaylist.jpg"> </div>
+                <div id="reproductorVideo">Video</div>
                 <div id="botonesReproductor">
                     <button class="botonesControl">1</button>
                     <button class="botonPlayPausa">2</button>
@@ -33,23 +33,23 @@
     </aside>
 
     <!--Pantalla de Búsqueda-->
-    <section id="contenedorBuscador" style="display: none;"> 
-        <nav>
+    <main id="pantallaBuscador" style="display: none;"> 
+        <nav id="contenedorBuscador">
             <label for="buscador">Buscar</label>
             <input type="text" id="buscador" name="buscador" placeholder="Buscar">
         </nav>
         <br><br>
         <p>¿Qué vas a escuchar hoy?</p>   
-    </section><br>
+    </main><br>
 
     <!--Pantalla de Inicio--> 
-    <main>
-        <section class="contenedor" id="contenedorInicio">
-            <article>Canciones/carrusel</article>
+    <main id="pantallaInicio">
+        <section id="contenedorInicio">
+            <article class="contenedor" id="contenedorCanciones">Canciones/carrusel</article>
             <br><br>
-            <article>Artistas</article>
-            <br>
-            <article>Cassetes</article>
+            <article class="contenedor">Artistas</article>
+            <br><br>
+            <article class="contenedor">Cassetes</article>
         </section> 
     </main>
 

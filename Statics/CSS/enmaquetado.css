@@ -1,60 +1,28 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
   background-color: #2F2F2F;
+  width: 100%;
+  height: 100%;
   display: flex;
   padding: 20px;
   gap: 20px;
 
 }
 
-/* .fondo {
-  flex: 1;
-  background-image: url('FondoInicio.jpg');
-  margin-top: 5%;
-  background-size: cover;
-  background-position: center;
-  min-height: 80vh;
-} */
-
-.barraLateral {
-  background-color: #424040; 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: auto;
-  width: 30%;
-  padding-top: 20px;
-  gap: 10px;
-  border-radius: 15px;
-  box-shadow: inset 0 0 5px #000;
-}
-/* .contenedor{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px;
-    border-radius: 15%;
-} */
-
-
 @font-face {
   font-family: "Jersey10";
-  src: url("Jersey10-Regular.ttf") format("truetype");
+  src: url(../Fonts/Jersey10-Regular.ttf) format("truetype");
 }
 
 .boton{
   color: aliceblue;
   /* font-size: 1.5rem; */
   
-}
-
-#contenedorPlaylist {
-    border-style: solid;
-    border-color: white;
-    color: rgb(37, 209, 37);
-    background-color: rgba(0,0,0,0.5);
-    width: 100%;
 }
 
 #barraLateral {
@@ -65,7 +33,7 @@ body {
     width: 30%;
     height: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     border-radius: 15px;
 
 }
@@ -73,12 +41,14 @@ body {
 #botonesLaterales {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     align-content: center;
+    justify-content: space-around;
     width: 100%;
+    height: 40%;
     border-radius: 15px;
-    gap: 15px;
-    padding: 20px 0px 40px 0px;
+    padding: 20px 0px 20px 0px;
     background-color: #222222;
 
 }
@@ -88,8 +58,7 @@ body {
     background-color: #6d6d6d;
     color: white;
     font-family: "Jersey10";
-    font-size: 1.5rem;
-    /* font-weight: 600; */
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
     text-align: center;
     border-radius: 15px;
     box-shadow: 0 0 5px #ffccff;
@@ -108,69 +77,94 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 15px;
-    margin: 15px 15px 15px 15px;
     padding: 10px;
-    width: 80%;
+    width: 100%;
+    height: 50%;
     background-color: #df47ca;
-    text-align: center;
     font-family: "Jersey10";
-    font-size: 1.5em;
-    justify-content: center;
 }
 
-/* #reproductor button {
+#reproductorVideo {
     display: flex;
-    flex-wrap: nowrap;
+    background-color: brown;
+    width: 100%;
+    height: 50%;
     justify-content: center;
-    border-radius: 15px;
-    border-style: none;  
-} */
+
+}
 
 #botonesReproductor {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color: aqua;
-    gap: 0.5em;
-    padding: 5px;
-    border-radius: 30px;
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: 15px;
+    padding: 1px;
+    background-color: rgba(0,0,0,0.5);
 }
 
 .botonesControl {
-    background-color: yellowgreen;
-    width: 4em;
-    height: 2em;
-    border-radius: 1em;
+    margin: 0 auto;
+    background-color: #424040;
+    border-radius: 15px;
     border-style: none;
-    
+    width: 20%;   
 }
 
 .botonPlayPausa {
-    background-color: blueviolet;
-    width: 4em;
-    height: 4em;
+    background-color: rgb(182, 182, 11);
     border-radius: 50%;
     border-style: none;
-    justify-content: center;
-    align-content: center;    
+    width: 25%;
+    aspect-ratio: 1 / 1; 
 }
 
 #sliderReproductor {
     display: flex;
-    background-color: rgb(107, 194, 25);
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.5);
     padding: 0 1.5em 0 1.5em;
 }
 
 #sliderReproductor input {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 80%;
+    margin: 0 auto;
+    width: 100%;
 }
 
 section div img{
     width: 100%;
     height: 100%;
+}
+
+#pantallaInicio {
+    width: 100%;
+    height: 100%;
+}
+
+#contenedorInicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background-image: url(../Media/FondoInicio.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding: 10px;
+    
+}
+
+.contenedor {
+    width: 90%;
+    height: 30%;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
 }
 
 
@@ -179,14 +173,16 @@ section div img{
     background-color: yellow;
 }
 
-
+#pantallaBuscador {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
 
 #contenedorBuscador {
+    width: 100%;
     color: white;
     background-color: #000;
-    border-radius: 30px;
-    padding: 10px 10px 10px 10px;
-
 }
 
 #contenedorBuscador, input {
@@ -194,3 +190,10 @@ section div img{
     padding: 10px;
 }
 
+#contenedorPlaylist {
+    border-style: solid;
+    border-color: white;
+    color: rgb(37, 209, 37);
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+}
