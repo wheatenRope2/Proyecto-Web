@@ -9,22 +9,18 @@ function mostrarCanciones(filtradasCancion)
   listaCancion.innerHTML = "";
   filtradasCancion.forEach(cancion => 
   {
-    let lic = document.createElement("button");
-    lic.id = `${cancion.nombre}`;
-    lic.textContent = `${cancion.nombre}`;
-    console.log(cancion);
-    console.log(cancion.nombre);
-    console.log(lic);
-    lic.addEventListener("click", () => 
+    
+    let butc = document.createElement("button");
+    butc.id = `${cancion.nombre}`;
+    let image = document.createElement("img");
+    image.src = `${cancion.imagen}`;
+    butc.textContent = `${cancion.nombre}`;
+    listaCancion.appendChild(butc);
+    butc.appendChild(image);
+    butc.addEventListener("click", () => 
     {
-        if (player && typeof player.destroy === "function") 
-        {
-        //    player.destroy();
-        }
         player.loadVideoById(cancion.link);
-        console.log(cancion.link);
     });
-    listaCancion.appendChild(lic);
   });
 }
 function mostrarArtistas(filtradosArtista) 
@@ -33,16 +29,17 @@ function mostrarArtistas(filtradosArtista)
 
   filtradosArtista.forEach(artista => 
   {
-    let lia = document.createElement("button");
-    lia.id = `${artista.artista}`;
-    lia.textContent = `${artista.artista}`;
-    
-    lia.addEventListener("click", () => 
+    let buta = document.createElement("button");
+    buta.id = `${artista.artista}`;
+    buta.textContent = `${artista.artista}`;
+    let imagea = document.createElement("img");
+    imagea.src = `${artista.imagen}`;
+    listaArtista.appendChild(buta);
+    buta.appendChild(imagea);
+    buta.addEventListener("click", () => 
     {
       console.log(`${artista.id}`);
     });
-
-    listaArtista.appendChild(lia);
   });
 }
 input.addEventListener("keyup", () => 

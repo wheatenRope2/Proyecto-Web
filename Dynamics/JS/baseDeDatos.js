@@ -10,7 +10,8 @@ const baseDatos =
             link: "gCYcHz2k5x0",
             genero: "Electronic",
             id_genero: "g1",
-            album: ""
+            imagen: "../Statics/Media/canciones/cancion1/cancion.jpg",
+
         },
         {
             id: "c2",
@@ -19,7 +20,8 @@ const baseDatos =
             id_artista: "a2",
             link: "JRfuAukYTKg",
             genero: "Pop",
-            id_genero: "g2"
+            id_genero: "g2",
+            imagen: "../Statics/Media/canciones/cancion2/cancion.jpg",
         },
         {
             id: "c3",
@@ -28,7 +30,8 @@ const baseDatos =
             id_artista: "a3",
             link: "tKi9Z-f6qX4",
             genero: "Electronic",
-            id_genero: "g1"
+            id_genero: "g1",
+            imagen: "../Statics/Media/canciones/cancion3/cancion.jpg",
         },
         {
             id: "c4",
@@ -37,7 +40,8 @@ const baseDatos =
             id_artista: "a4",
             link: "YJVmu6yttiw",
             genero: "Electronic",
-            id_genero: "g1"
+            id_genero: "g1",
+            imagen: "../Statics/Media/canciones/cancion4/cancion.jpg",
         },
         {
             id: "c5",
@@ -46,7 +50,8 @@ const baseDatos =
             id_artista: "a5",
             link: "_ovdm2yX4MA",
             genero: "Electronic",
-            id_genero: "g1"
+            id_genero: "g1",
+            imagen: "../Statics/Media/canciones/cancion5/cancion.jpg",
         },
         {
             id: "c6",
@@ -55,7 +60,8 @@ const baseDatos =
             id_artista: "a6",
             link: "RDqTzc6PXi-gY",
             genero: "Electronic",
-            id_genero: "g1"
+            id_genero: "g1",
+            imagen: "../Statics/Media/canciones/cancion6/cancion.jpg",
         },
         {
             id: "c7",
@@ -64,7 +70,8 @@ const baseDatos =
             id_artista: "a7",
             link: "I9e3X3SEm1Y",
             genero: "Electronic",
-            id_genero: "g1"
+            id_genero: "g1",
+            imagen: "../Statics/Media/canciones/cancion7/cancion.jpg",
         },
         {
             id: "c8",
@@ -73,7 +80,8 @@ const baseDatos =
             id_artista: "a8",
             link: "dX3k_QDnzHE",
             genero: "Pop",
-            id_genero: "g2"
+            id_genero: "g2",
+            imagen: "../Statics/Media/canciones/cancion8/cancion.jpg",
         },
         {
             id: "c9",
@@ -82,7 +90,8 @@ const baseDatos =
             id_artista: "a9",
             link: "KrVC5dm5fFc",
             genero: "Electronic",
-            id_genero: "g1"
+            id_genero: "g1",
+             imagen: "../Statics/Media/canciones/cancion9/cancion.jpg",
         },
         {
             id: "c10",
@@ -91,7 +100,8 @@ const baseDatos =
             id_artista: "a10",
             link: "5NV6Rdv1a3I",
             genero: "Pop",
-            id_genero: "g2"
+            id_genero: "g2",
+            imagen: "../Statics/Media/canciones/cancion10/cancion.jpg",
         },
         {
             id: "c11",
@@ -102,6 +112,7 @@ const baseDatos =
             genero: "Rock",
             id_genero: "g3",
             album: "Hotel California",
+            imagen: "../Statics/Media/canciones/cancion11/cancion.jpg",
         },
         {
             id: "c12",
@@ -112,6 +123,7 @@ const baseDatos =
             genero: "Pop",
             id_genero: "g2",
             album: "One Love",
+            imagen: "../Statics/Media/canciones12/cancion.jpg",
         },
         {
             id: "c13",
@@ -122,6 +134,7 @@ const baseDatos =
             genero: "Jazz",
             id_genero: "g4",
             album: "96 Months",
+            imagen: "../Statics/Media/canciones/cancion13/cancion.jpg",
         },
         {
             id: "c14",
@@ -132,6 +145,7 @@ const baseDatos =
             genero: "Electronic",
             id_genero: "g1",
             album: "Ready For The Weekend",
+            imagen: "../Statics/Media/canciones/cancion14/cancion.jpg",            
         },
         {
             id: "c15",
@@ -142,6 +156,7 @@ const baseDatos =
             genero: "Rock",
             id_genero: "g3",
             album: "blanco",
+            imagen: "../Statics/Media/canciones/cancion15/cancion.jpg",
         },
         {
             id: "c16",
@@ -152,6 +167,7 @@ const baseDatos =
             genero: "Rock",
             id_genero: "g3",
             album: "Magical Mystery Tour",
+            imagen: "../Statics/Media/canciones/cancion16/cancion.jpg",
         },
         {
             id: "c17",
@@ -162,6 +178,7 @@ const baseDatos =
             genero: "Pop",
             id_genero: "g2",
             album: "Revolver",
+            imagen: "../Statics/Media/canciones/cancion17/cancion.jpg",
         },
         {
             id: "c18",
@@ -172,6 +189,7 @@ const baseDatos =
             genero: "Rock",
             id_genero: "g3",
             album: "American Idiot",
+            imagen: "../Statics/Media/canciones/cancion18/cancion.jpg",
         },
         {
             id: "c19",
@@ -182,6 +200,7 @@ const baseDatos =
             genero: "Rock",
             id_genero: "g3",
             album: "L.A.Woman",
+            imagen: "../Statics/Media/canciones/cancion19/cancion.jpg",
         },
         {
             id: "c20",
@@ -192,6 +211,7 @@ const baseDatos =
             genero: "Rock",
             id_genero: "g3",
             album: "One Of The Night",
+            imagen: "../Statics/Media/canciones/cancion20/cancion.jpg",
         },
         {
             id: "c21",
@@ -201,7 +221,8 @@ const baseDatos =
             link: "_5vbUZmkhDk",
             genero: "Rock",
             id_genero: "g3",
-            album: "Master of Puppets"
+            album: "Master of Puppets",
+            imagen: "../Statics/Media/canciones/cancion.jpg",
         },
         {
             id: "c22",
@@ -211,7 +232,8 @@ const baseDatos =
             link: "8xPaeONSn_8",
             genero: "Rock",
             id_genero: "g3",
-            album: "Metallica"
+            album: "Metallica",
+            imagen: "../Statics/Media/canciones/cancion22/cancion.jpg",
         },
         {
             id: "c23",
@@ -221,7 +243,8 @@ const baseDatos =
             link: "Q0GPD6FHnOU",
             genero: "Rock",
             id_genero: "g3",
-            album: "Ride the Lightning"
+            album: "Ride the Lightning",
+            imagen: "../Statics/Media/canciones/cancion23/cancion.jpg",
         },
         {
             id: "c24",
@@ -231,7 +254,8 @@ const baseDatos =
             link: "CW8S8Rki5zE",
             genero: "Rock",
             id_genero: "g3",
-            album: "Spotify Singles"
+            album: "Spotify Singles",
+            imagen: "../Statics/Media/canciones/cancion24/cancion.jpg",
         },
         {
             id: "c25",
@@ -241,7 +265,8 @@ const baseDatos =
             link: "53Hcbzj3Rmw",
             genero: "Rock",
             id_genero: "g3",
-            album: "Chocolate Starfish and the Hot Dog Flavored Water"
+            album: "Chocolate Starfish and the Hot Dog Flavored Water",
+            imagen: "../Statics/Media/canciones/cancion25/cancion.jpg",
         },
         {
             id: "c26",
@@ -251,7 +276,8 @@ const baseDatos =
             link: "EQJMmjw8MVo",
             genero: "Rock",
             id_genero: "g3",
-            album: "Three Dollar Bill, Y'all"
+            album: "Three Dollar Bill, Y'all",
+            imagen: "../Statics/Media/canciones/cancion26/cancion.jpg",
         },
         {
             id: "c27",
@@ -261,7 +287,8 @@ const baseDatos =
             link: "Nej8hldE25k",
             genero: "Rock",
             id_genero: "g3",
-            album: "Rust in Peace"
+            album: "Rust in Peace",
+            imagen: "../Statics/Media/canciones/cancion27/cancion.jpg",
         },
         {
             id: "c28",
@@ -271,7 +298,8 @@ const baseDatos =
             link: "SLEvhW2g_ZE",
             genero: "Rock",
             id_genero: "g3",
-            album: "Rust in Peace"
+            album: "Rust in Peace",
+            imagen: "../Statics/Media/canciones/cancion28/cancion.jpg",
         },
         {
             id: "c29",
@@ -281,7 +309,8 @@ const baseDatos =
             link: "sxlMSq_xq7o",
             genero: "Rock",
             id_genero: "g3",
-            album: "Dr. Feelgood"
+            album: "Dr. Feelgood",
+            imagen: "../Statics/Media/canciones/cancion29/cancion.jpg",
         },
         {
             id: "c30",
@@ -291,7 +320,8 @@ const baseDatos =
             link: "0G3bv_bp9Wk",
             genero: "Rock",
             id_genero: "g3",
-            album: "Ride the Lightning"
+            album: "Ride the Lightning",
+            imagen: "../Statics/Media/canciones/cancion30/cancion.jpg",
         },
         {
             id: "c31",
@@ -301,7 +331,8 @@ const baseDatos =
             link: "4Q5MCKZ31Io",
             genero: "Pop",
             id_genero: "g2",
-            album: "Concedimi"
+            album: "Concedimi",
+            imagen: "../Statics/Media/canciones/cancion31/cancion.jpg",
         },
         {
             id: "c32",
@@ -311,7 +342,8 @@ const baseDatos =
             link: "L6bRE3JVMZQ",
             genero: "Pop",
             id_genero: "g2",
-            album: "Lluvia: Rain City"
+            album: "Lluvia: Rain City",
+            imagen: "../Statics/Media/canciones/cancion32/cancion.jpg",
         },
         {
             id: "C33",
@@ -321,7 +353,8 @@ const baseDatos =
             link: "6nghc9zSMu4",
             genero: "Pop",
             id_genero: "g2",
-            album: "Rain City"
+            album: "Rain City",
+            imagen: "../Statics/Media/canciones/cancion33/cancion.jpg",
         },
         {
             id: "c34",
@@ -331,7 +364,9 @@ const baseDatos =
             link: "cEZA3s8PlZk",
             genero: "Pop",
             id_genero: "g2",
-            album: "Ruby"
+            album: "Ruby",
+            imagen: "../Statics/Media/canciones/cancion34/cancion.jpg",
+
         },
         {
             id: "c35",
@@ -341,7 +376,8 @@ const baseDatos =
             link: "dISNgvVpWlo",
             genero: "Pop",
             id_genero: "g2",
-            album: "Square One"
+            album: "Square One",
+            imagen: "../Statics/Media/canciones/cancion35/cancion.jpg",
         },
         {
             id: "c36",
@@ -351,7 +387,8 @@ const baseDatos =
             link: "A-yxW8ALa-A",
             genero: "Pop",
             id_genero: "g2",
-            album: "Rain City"
+            album: "Rain City",
+            imagen: "../Statics/Media/canciones/cancion36/cancion.jpg",
         },
         {
             id: "c37",
@@ -361,7 +398,8 @@ const baseDatos =
             link: "S5Izt5EgAq0",
             genero: "Pop",
             id_genero: "g2",
-            album: "The Album"
+            album: "The Album",
+            imagen: "../Statics/Media/canciones/cancion37/cancion.jpg",
         },
         {
             id: "c38",
@@ -371,7 +409,8 @@ const baseDatos =
             link: "Gx5ai3HtShg",
             genero: "Hip-hop",
             id_genero: "g5",
-            album: "SISTAHOOD"
+            album: "SISTAHOOD",
+            imagen: "../Statics/Media/canciones/cancion38/cancion.jpg",
         },
         {
             id: "c39",
@@ -381,7 +420,8 @@ const baseDatos =
             link: "nawuHf66fKQ",
             genero: "Hip-hop",
             id_genero: "g5",
-            album: "Malamarismo"
+            album: "Malamarismo",
+            imagen: "../Statics/Media/canciones/cancion39/cancion.jpg",
         },
         {
             id: "c40",
@@ -391,7 +431,8 @@ const baseDatos =
             link: "a6Or1V7XUUo",
             genero: "Regional",
             id_genero: "g6",
-            album: "Colmillo de leche"
+            album: "Colmillo de leche",
+            imagen: "../Statics/Media/canciones/cancion40/cancion.jpg",
         },
         {
             id: "c41",
@@ -401,7 +442,8 @@ const baseDatos =
             link: "yjabuIzJgcI",
             genero: "Rock",
             id_genero: "g1",
-            album: "Navegantes"
+            album: "Navegantes",
+            imagen: "../Statics/Media/canciones/cancion41/cancion.jpg",
         },
         {
             id: "c42",
@@ -411,7 +453,8 @@ const baseDatos =
             link: "99vueJmTJt0",
             genero: "Rock",
             id_genero: "g3",
-            album: "Dropped Frames, Vol. 1"
+            album: "Dropped Frames, Vol. 1",
+            imagen: "../Statics/Media/canciones/cancion42/cancion.jpg",
         },
         {
             id: "c43",
@@ -421,7 +464,8 @@ const baseDatos =
             link: "PxLjXGGx49c",
             genero: "Rock",
             id_genero: "g3",
-            album: "Post Traumatic"
+            album: "Post Traumatic",
+            imagen: "../Statics/Media/canciones/cancion43/cancion.jpg",
         },
         {
             id: "c44",
@@ -431,7 +475,8 @@ const baseDatos =
             link: "0oJmWfZFoIw",
             genero: "Rock",
             id_genero: "g3",
-            album: "ECOS"
+            album: "ECOS",
+            imagen: "../Statics/Media/canciones/cancion44/cancion.jpg",
         },
         {
             id: "c45",
@@ -441,7 +486,8 @@ const baseDatos =
             link: "GShxN7ONPmI",
             genero: "Rock",
             id_genero: "g3",
-            album: "From Zero"
+            album: "From Zero",
+            imagen: "../Statics/Media/canciones/cancion45/cancion.jpg",
         },
         {
             id: "c46",
@@ -451,7 +497,8 @@ const baseDatos =
             link: "5AGsQ4-V4h8",
             genero: "Pop", 
             id_genero: "g2",
-            album: "Sacred Hearts Club"
+            album: "Sacred Hearts Club",
+            imagen: "../Statics/Media/canciones/cancion46/cancion.jpg", 
         },
         {
             id: "c47",
@@ -461,7 +508,8 @@ const baseDatos =
             link: "-WuaAvF4oEA",
             genero: "Pop",
             id_genero: "g2",
-            album: "Torches"
+            album: "Torches",
+            imagen: "../Statics/Media/canciones/cancion47/cancion.jpg",
         },
         {
             id: "c48",
@@ -471,7 +519,9 @@ const baseDatos =
             link: "FtqG6UZhWoA",
             genero: "Electronic",
             id_genero: "g1",
-            album: "The Darkness That You Fear - Single"
+            album: "The Darkness That You Fear - Single",
+            imagen: "../Statics/Media/canciones/cancion48/cancion.jpg",
+
         },
         {
             id: "c49",
@@ -481,7 +531,8 @@ const baseDatos =
             link: "1gRfBLSqyNE",
             genero: "Rock",
             id_genero: "g3",
-            album: "Luxury Desease"
+            album: "Luxury Desease",
+            imagen: "../Statics/Media/canciones/cancion49/cancion.jpg",
         },
         {
             id: "c50",
@@ -491,7 +542,8 @@ const baseDatos =
             link: "hDy9BrB9_VU",
             genero: "Rock",
             id_genero: "g3",
-            album: "Broken Heart of Gold - Single"
+            album: "Broken Heart of Gold - Single",
+            imagen: "../Statics/Media/canciones/cancion50/cancion.jpg",
         }
     ],
     generos:
@@ -532,211 +584,211 @@ const baseDatos =
         {
             id: "a1",
             artista: "3am",
-            imagen: "",
+            imagen: "../Statics/Media/canciones/cancion33/artista.jpg",
             descripcion: "Dúo musical hispanohablante conocido por su estilo melódico y letras sensibles dentro del pop alternativo."
         },
         {
             id: "a2",
             artista: "Avicii",
-            imagen: "",
+            imagen: "../Statics/Media/canciones/cancion5/artista.jpg",
             descripcion: "DJ y productor sueco que revolucionó la música electrónica con melodías emotivas y colaboraciones icónicas."
         },
         {
             id: "a3",
             artista: "BlackPink",
-            imagen: "",
+            imagen: "../Statics/Media/canciones/cancion35/artista.jpg",
             descripcion: "Grupo femenino de K-pop surcoreano que combina pop, rap y EDM con coreografías potentes y presencia global."
         },
         {
             id: "a4",
             artista: "Bring Me The Horizon",
-            imagen: "",
+            imagen: "../Statics/Media/canciones/cancion24/artista.jpg",
             descripcion: "Banda británica que evolucionó del metalcore al rock alternativo y experimental con gran éxito internacional."
         },
         {
             id: "a5",
             artista: "Camilo Séptimo",
-            imagen: "",
+            imagen: "../Statics/Media/canciones/cancion41/artista.jpg",
             descripcion: "Banda mexicana de rock alternativo con letras introspectivas y un estilo atmosférico y moderno."
         },
         {
             id: "a6",
             artista: "Calvin Harris",
-            imagen: "",
+            imagen: "../Statics/Media/canciones/cancion14/artista.jpg",
             descripcion: "Productor y DJ escocés que domina las listas globales con hits de dance pop y colaboraciones con grandes artistas."
         },
         {
             id: "a7",
             artista: "Carin León - Camilo",
-            imagen: "",
+            imagen: "../../Statics/Media/canciones/cancion40/artista.jpg",
             descripcion: "Fusión entre el regional mexicano de Carin León y el pop fresco del colombiano Camilo, una colaboración de estilos únicos."
         },
         {
             id: "a8",
             artista: "Daft Punk ft. Pharrell Williams",
-            imagen: "",
+            imagen: "../Statics/Media/canciones/cancion10/artista.jpg",
             descripcion: "Iconos del electro francés junto con el estilo funky de Pharrell; su unión marcó un antes y después en la música disco moderna."
         },
         {
             id: "a9",
             artista: "David Guetta ft. Sia",
-            imagen: "",
+            imagen: "../Statics/Media/canciones/cancion2/artista.jpg",
             descripcion: "Dúo imbatible en la electrónica y el pop; Guetta y Sia lograron una fórmula explosiva de emoción y energía."
         },
         {
             id: "a10",
             artista: "Eagles",
-            imagen: "",
+            imagen: "../Statics/Media/canciones/cancion11/artista.jpg",
             descripcion: "Legendaria banda estadounidense de rock y country rock, famosa por sus armonías vocales y clásicos como 'Hotel California'."
         },
         {
             id: "a11",
             artista: "Eric Prydz",
-            imagen: "",
+            imagen: "../Statics/Media/canciones/cancion7/artista.jpg",
             descripcion: "Productor sueco de música electrónica conocido por su enfoque progresivo y su icónico track 'Opus'."
         },
         {
             id: "a12",
             artista: "Frank Sinatra",
-            imagen: "",
+            imagen: "../Statics/Media/canciones/cancion13/artista.jpg",
             descripcion: "Voz legendaria del pop clásico y el jazz, símbolo de la elegancia vocal del siglo XX."
         },
         {
             id: "a13",
             artista: "Green Day",
-            imagen: "",
+            imagen: "../Statics/Media/canciones/cancion18/artista.jpg",
             descripcion: "Banda estadounidense de punk rock con letras cargadas de rebeldía y un sonido explosivo y melódico."
         },
         {
             id: "a14",
             artista: "Jennie",
-            imagen: "",
+            imagen: "../Statics/Media/canciones/cancion34/artista.jpg",
             descripcion: "Miembro de BlackPink y solista, Jennie mezcla pop coreano con influencias de hip-hop y estilo elegante."
         },
         {
             id: "a15",
             artista: "Linkin Park",
-            imagen: "",
+            imagen: "../Statics/Media/canciones/cancion45/artista.jpg",
             descripcion: "Banda estadounidense pionera en combinar rock alternativo, nu metal y rap con un enfoque emocional y potente."
         },
         {
             id: "a16",
             artista: "Limp Bizkit",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion25/artista.jpg",
             descripcion: "Grupo conocido por su mezcla de rock, rap y actitud rebelde, íconos del nu metal de los años 2000."
         },
         {
             id: "a17",
             artista: "Ludiko-Sidu Martines",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion38/artista.jpg",
             descripcion: "Dúo de rap comprometido con letras sociales, identidades afro-latinas y empoderamiento femenino."
         },
         {
             id: "a18",
             artista: "M83",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion8/artista.jpg",
             descripcion: "Proyecto de synthpop y rock alternativo con un estilo cinematográfico y nostálgico."
         },
         {
             id: "a19",
             artista: "Mala Rodríguez",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion39/artista.jpg",
             descripcion: "Rapper española pionera del hip-hop en español, mezcla fuerza lírica con identidad cultural intensa."
         },
         {
             id: "a20",
             artista: "Maroon 5",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion12/artista.jpg",
             descripcion: "Banda pop rock estadounidense con un sonido fresco, pegajoso y dominado por la voz de Adam Levine."
         },
         {
             id: "a21",
             artista: "Martin Garrix",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion1/artista.jpg",
             descripcion: "Joven DJ y productor neerlandés que conquistó la electrónica mundial con su hit 'Animals'."
         },
         {
             id: "a22",
             artista: "Matteo Romano",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion31/artista.jpg",
             descripcion: "Cantautor italiano de baladas pop suaves, conocido por su sensibilidad vocal y letras introspectivas."
         },
         {
             id: "a23",
             artista: "Megadeth",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion28/artista.jpg",
             descripcion: "Banda icónica de thrash metal, formada por el exguitarrista de Metallica, famosa por su virtuosismo técnico."
         },
         {
             id: "a24",
             artista: "Metallica",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion23/artista.jpg",
             descripcion: "Una de las bandas de metal más influyentes del mundo, responsables de himnos como 'Master of Puppets'."
         },
         {
             id: "a25",
             artista: "Mike Shinoda",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion42/artista.jpg",
             descripcion: "Músico, rapero y productor, cofundador de Linkin Park y solista con sonidos alternativos y personales."
         },
         {
             id: "a26",
             artista: "Mötley Crüe",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion29/artista.jpg",
             descripcion: "Banda estadounidense de glam metal conocida por su actitud irreverente, exceso y éxitos ochenteros."
         },
         {
             id: "a27",
             artista: "Nicky Romero",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion9/artista.jpg",
             descripcion: "DJ y productor holandés reconocido en la escena EDM por sus sonidos enérgicos y colaboraciones masivas."
         },
         {
             id: "a28",
             artista: "Skrillex ft. Sirah",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion4/artista.jpg",
             descripcion: "Explosiva combinación de dubstep agresivo y versos rítmicos, con Skrillex a la producción y Sirah rapeando."
         },
         {
             id: "a29",
             artista: "The Beatles",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion15/artista.jpg",
             descripcion: "Cuarteto británico que revolucionó la música moderna con su evolución del pop al rock psicodélico."
         },
         {
             id: "a30",
             artista: "The Doors",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion19/artista.jpg",
             descripcion: "Banda estadounidense de rock psicodélico liderada por la intensa voz y poesía de Jim Morrison."
         },
         {
             id: "a31",
             artista: "Whethan ft. STRFKR",
-            imagen: "",
+             imagen: "..Statics/Media/canciones/cancion6/artista.jpg",
             descripcion: "Colaboración indie-electrónica que fusiona sintetizadores brillantes y vocales nostálgicas."
         },
         {
             id: "a32",
             artista: "deadmau5",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion3/artista.jpg",
             descripcion: "Referente canadiense del progressive house y la música electrónica de club, famoso por su máscara de ratón."
         },
         {
             id: "a33",
             artista: "Foster The People",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion46/artista.jpg",
             descripcion: "Indie pop bailable, letras introspectivas y ritmos pegajosos."
         },
         {
             id: "a34",
             artista: "ONE OK ROCK",
-            imagen: "",
+            imagen: "../Statics/Media/canciones/cancion49/artista.jpg",
             descripcion: "Rock japonés emotivo, enérgico y con influencia occidental."
         },
         {
             id: "a35",
             artista: "The Chemical Brothers",
-            imagen: "",
+            imagen: "..Statics/Media/canciones/cancion48/artista.jpg",
             descripcion: "Electrónica psicodélica, potente, con bases rítmicas experimentales."
         }
     ]
