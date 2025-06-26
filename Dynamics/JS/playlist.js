@@ -1,5 +1,46 @@
-let playlist = ["No te reconozco", "Mandala", "Contacto"];
+let playlist = [];
 let lista = document.getElementById("playlist");
+
+const datosPlaylist = baseDatos;
+const inputP = document.getElementById("playlistInput");
+const listaCancionP = document.getElementById("playlist-canciones");
+const listaArtistaP = document.getElementById("playlist-artistas");
+
+function mostrarCancionesP(filtradasCancion) 
+{
+  listaCancionP.innerHTML = "";
+  filtradasCancion.forEach(cancion => 
+  {
+    let lica = document.createElement("button");
+    lica.id = `${cancion.nombre}`;
+    lica.textContent = `${cancion.nombre}`;
+    console.log(cancion);
+    console.log(cancion.nombre);
+    console.log(lica);
+    lica.addEventListener("click", () => 
+    {
+        if (player && typeof player.destroy === "function") 
+        {
+        //    player.destroy();
+        }
+        player.loadVideoById(cancion.link);
+        console.log(cancion.link);
+    });
+    listaCancionP.appendChild(lica);
+  });
+}
+
+inputP.addEventListener("keyup", () => 
+{
+  let textoCancionP = inputP.value.toLowerCase();
+  let filtradasCancionP = datosPlaylist.canciones.filter(c =>
+    c.nombre.toLowerCase().includes(textoCancionP)
+  );
+    mostrarCancionesP(filtradasCancionP); 
+});
+
+mostrarCancionesP(datosPlaylist.canciones);
+
 
 //Muestra y actualiza la playlist
 function renderizarPlaylist() {
