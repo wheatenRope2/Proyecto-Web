@@ -176,13 +176,18 @@ section div img{
 #pantallaBuscador {
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-image: url(../Media/FondoBuscador.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    border-radius: 15px;
 }
 
 #contenedorBuscador {
     width: 100%;
+    height: 20%;
     color: white;
-    background-color: #000;
 }
 
 #contenedorBuscador, input {
@@ -196,4 +201,26 @@ section div img{
     color: rgb(37, 209, 37);
     background-color: rgba(0,0,0,0.5);
     width: 100%;
+}
+
+#pantallaPlaylist {
+    width: 100%;
+    height: 100%;
+    background-image: url(../Media/FondoPlaylist.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    border-radius: 15px;
+}
+
+#pantallaCreditos {
+    width: 100%;
+    height: 100%;
+    background-image: url(../Media/FondoCreditos.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    border-radius: 15px;
 }

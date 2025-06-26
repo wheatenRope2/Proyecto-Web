@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Statics/CSS/enmaquetado.css">
+    <script src="../Dynamics/JS/baseDeDatos.js"></script>
     <title>Paginita web</title>
 </head>
 <body>
@@ -37,6 +38,30 @@
         <nav id="contenedorBuscador">
             <label for="buscador">Buscar</label>
             <input type="text" id="buscador" name="buscador" placeholder="Buscar">
+            <div id="lista-canciones"></div>
+            <br>
+            <div id="lista-artistas"></div>
+                <div class="video-responsive">
+                <header>
+                <i class="fa-brands fa-youtube" style="color: var(--primary-color);"></i>
+                </header>
+                <div id="player"></div>
+
+                <div class="controls-bar">
+                    <button id="playPausebtn">⏸️</button> 
+                    <label for="volumeSlider">Volumen:</label>
+                    <button type="text" id="muteBtn"></button> 
+                    <input type="range" max="100"  id="volumeSlider">
+
+                    <!-- <span class="time">
+                        <span id="currentTime">00:00</span>
+                        <span id="duration">00:00</span>
+                    </span> -->
+                    <label for="seekBar">Duracion:</label>
+                    <input type="range" min="0" max="100" value="0" id="seekBar">
+                </div>
+                
+                </div>
         </nav>
         <br><br>
         <p>¿Qué vas a escuchar hoy?</p>   
@@ -54,7 +79,7 @@
     </main>
 
     <!--Pantalla de PlayList-->
-    <main>
+    <main id="pantallaPlaylist" style="display: none;">
         <section id="contenedorPlaylist" class="contenedor" style="display: none;">
             <article>
                 <h2>Mi playlist</h2>
@@ -63,17 +88,24 @@
                 </ul>
 
                 <br><br>
-                <section class="barraReproductora"> Barra de reproductor </section>
             </article>
         </section>
                 
     </main>
-            <aside id="playlist">
-
-            </aside>
-        </div>
-    </div>
-
+           
+    <!--Pantalla de Créditos-->
+    <main id="pantallaCreditos" style="display: none;">
+        <section id="contenedorCreditos" style="display: none;">
+            <article>
+                <h2>Créditos</h2>
+                <p>Desarrollado por: Tu Nombre</p>
+                <p>Fecha de creación: Fecha</p>
+                <p>Descripción del proyecto: Breve descripción del proyecto.</p>
+            </article>
+        </section>
+    </main>
 </body>
-<script src="../Dynamics/enmaquetado.js"></script>
+    <script src="../Dynamics/JS/buscador.js"></script>
+    <script src="https://youtube.com/iframe_api"></script>
+    <script src="../Dynamics/JS/enmaquetado.js"></script>
 </html>
