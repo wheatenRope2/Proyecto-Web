@@ -19,7 +19,9 @@
         <section id="reproductor">
             <article >
                 <div id="reproductorVideo">
-                    <div id="player"></div> <!-- Contenedor del reproductor de YouTube -->
+                    <div id="player">
+                            <img src="../Statics/Media/Houston carga_1920X1440.gif">
+                    </div> <!-- Contenedor del reproductor de YouTube -->
                 </div>
                 <div class="controls-bar"> 
                     <div id="sliderVol">
@@ -94,15 +96,14 @@
                 <div class="envoltorio-carrusel">
                     <button id="btnIzqArtistas" class="boton-carrusel">◀</button>
                     <div id="carruselArtistas" class="carrusel">
-                        
                     </div>
                     <button id="btnDerArtistas" class="boton-carrusel">▶</button>
                 </div>
             </article>
             <br><br>
-            <article class="contenedor" id="contenedorGeneros">
-                
-            </article>
+            <div  id="contenedorGeneros">
+                <img src="../Statics/Media/huston música 1_1920X1440.gif" >
+            </div>
         
         </section> 
     </main>
@@ -138,14 +139,27 @@
     <!--Pantalla de Créditos-->
     <main id="pantallaCreditos" style="display: none;">
         <section id="contenedorCreditos" style="display: none;">
-            <article>
-                <h2>Créditos</h2>
-                <p>Desarrollado por: Tu Nombre</p>
-                <p>Fecha de creación: Fecha</p>
-                <p>Descripción del proyecto: Breve descripción del proyecto.</p>
+            <article class="contenedorIntegrantes" id="contenedorIntegrantes">
+                <h3> Integrantes del equipo: </h3>
+                <article class="contenedor2"><h4>Domínguez Jiménez Arturo Gabriel</h4>Desarrollo de cookies e interfaz</article>
+                <article class="contenedorI"><h4>Fernández Varela Gómez Jorge</h4>Desarrollo de lógica de colas de reproducción y apoyo en el diseño de interfaz</article>
+                <article class="contenedorI"><h4>González Peña Rubén Isaac</h4>Desarrollo de lógica general y apoyo en el desarrollo de la interfaz </article>
+                <article class="contenedor2"><h4>Hernández Rivera Dulce</h4>Desarrollo de base de datos y apoyo en la interfaz </article>
+                <article class="contenedorI"><h4>López Mayén Diego </h4>Conexión de la página con la API de YouTube y apoyo con la base de datos</article>
+                <h3> Asesoras del equipo: </h3>
+                <article class="contenedor3"><h4>Alatorre Campos Mia Constanza</h4></article>
+                <article class="contenedor3"><h4>Zozaya Fernández Melanie</h4></article>
+                <h3> Artista: </h3>
+                <article class="contenedor3"><h4>Fraide Armenta Caro</h4></article>
             </article>
         </section>
+            <img src="../Statics/Media/huston saluda_1920X1440.gif" height="650">
     </main>
+</body>
+    <script src="https://youtube.com/iframe_api"></script>
+    <script src="../Dynamics/JS/enmaquetado.js"></script>
+    <script src="../Dynamics/JS/playlist.js"></script>
+    <script src="../Dynamics/JS/buscador.js"></script>
 </body>
     <script src="https://youtube.com/iframe_api"></script>
     <script src="../Dynamics/JS/enmaquetado.js"></script>
