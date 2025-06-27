@@ -123,7 +123,7 @@ const baseDatos =
             genero: "Pop",
             id_genero: "g2",
             album: "One Love",
-            imagen: "../Statics/Media/canciones12/cancion.jpg",
+            imagen: "../Statics/Media/canciones/cancion12/cancion.jpg",
         },
         {
             id: "c13",
@@ -222,7 +222,7 @@ const baseDatos =
             genero: "Rock",
             id_genero: "g3",
             album: "Master of Puppets",
-            imagen: "../Statics/Media/canciones/cancion.jpg",
+            imagen: "../Statics/Media/canciones/cancion21/cancion.jpg",
         },
         {
             id: "c22",
@@ -620,7 +620,7 @@ const baseDatos =
         {
             id: "a7",
             artista: "Carin León - Camilo",
-            imagen: "../../Statics/Media/canciones/cancion40/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion40/artista.jpg",
             descripcion: "Fusión entre el regional mexicano de Carin León y el pop fresco del colombiano Camilo, una colaboración de estilos únicos."
         },
         {
@@ -674,121 +674,121 @@ const baseDatos =
         {
             id: "a16",
             artista: "Limp Bizkit",
-            imagen: "..Statics/Media/canciones/cancion25/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion25/artista.jpg",
             descripcion: "Grupo conocido por su mezcla de rock, rap y actitud rebelde, íconos del nu metal de los años 2000."
         },
         {
             id: "a17",
             artista: "Ludiko-Sidu Martines",
-            imagen: "..Statics/Media/canciones/cancion38/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion38/artista.jpg",
             descripcion: "Dúo de rap comprometido con letras sociales, identidades afro-latinas y empoderamiento femenino."
         },
         {
             id: "a18",
             artista: "M83",
-            imagen: "..Statics/Media/canciones/cancion8/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion8/artista.jpg",
             descripcion: "Proyecto de synthpop y rock alternativo con un estilo cinematográfico y nostálgico."
         },
         {
             id: "a19",
             artista: "Mala Rodríguez",
-            imagen: "..Statics/Media/canciones/cancion39/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion39/artista.jpg",
             descripcion: "Rapper española pionera del hip-hop en español, mezcla fuerza lírica con identidad cultural intensa."
         },
         {
             id: "a20",
             artista: "Maroon 5",
-            imagen: "..Statics/Media/canciones/cancion12/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion12/artista.jpg",
             descripcion: "Banda pop rock estadounidense con un sonido fresco, pegajoso y dominado por la voz de Adam Levine."
         },
         {
             id: "a21",
             artista: "Martin Garrix",
-            imagen: "..Statics/Media/canciones/cancion1/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion1/artista.jpg",
             descripcion: "Joven DJ y productor neerlandés que conquistó la electrónica mundial con su hit 'Animals'."
         },
         {
             id: "a22",
             artista: "Matteo Romano",
-            imagen: "..Statics/Media/canciones/cancion31/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion31/artista.jpg",
             descripcion: "Cantautor italiano de baladas pop suaves, conocido por su sensibilidad vocal y letras introspectivas."
         },
         {
             id: "a23",
             artista: "Megadeth",
-            imagen: "..Statics/Media/canciones/cancion28/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion28/artista.jpg",
             descripcion: "Banda icónica de thrash metal, formada por el exguitarrista de Metallica, famosa por su virtuosismo técnico."
         },
         {
             id: "a24",
             artista: "Metallica",
-            imagen: "..Statics/Media/canciones/cancion23/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion23/artista.jpg",
             descripcion: "Una de las bandas de metal más influyentes del mundo, responsables de himnos como 'Master of Puppets'."
         },
         {
             id: "a25",
             artista: "Mike Shinoda",
-            imagen: "..Statics/Media/canciones/cancion42/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion42/artista.jpg",
             descripcion: "Músico, rapero y productor, cofundador de Linkin Park y solista con sonidos alternativos y personales."
         },
         {
             id: "a26",
             artista: "Mötley Crüe",
-            imagen: "..Statics/Media/canciones/cancion29/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion29/artista.jpg",
             descripcion: "Banda estadounidense de glam metal conocida por su actitud irreverente, exceso y éxitos ochenteros."
         },
         {
             id: "a27",
             artista: "Nicky Romero",
-            imagen: "..Statics/Media/canciones/cancion9/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion9/artista.jpg",
             descripcion: "DJ y productor holandés reconocido en la escena EDM por sus sonidos enérgicos y colaboraciones masivas."
         },
         {
             id: "a28",
             artista: "Skrillex ft. Sirah",
-            imagen: "..Statics/Media/canciones/cancion4/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion4/artista.jpg",
             descripcion: "Explosiva combinación de dubstep agresivo y versos rítmicos, con Skrillex a la producción y Sirah rapeando."
         },
         {
             id: "a29",
             artista: "The Beatles",
-            imagen: "..Statics/Media/canciones/cancion15/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion15/artista.jpg",
             descripcion: "Cuarteto británico que revolucionó la música moderna con su evolución del pop al rock psicodélico."
         },
         {
             id: "a30",
             artista: "The Doors",
-            imagen: "..Statics/Media/canciones/cancion19/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion19/artista.jpg",
             descripcion: "Banda estadounidense de rock psicodélico liderada por la intensa voz y poesía de Jim Morrison."
         },
         {
             id: "a31",
             artista: "Whethan ft. STRFKR",
-             imagen: "..Statics/Media/canciones/cancion6/artista.jpg",
+             imagen: "../Statics/Media/canciones/cancion6/artista.jpg",
             descripcion: "Colaboración indie-electrónica que fusiona sintetizadores brillantes y vocales nostálgicas."
         },
         {
             id: "a32",
             artista: "deadmau5",
-            imagen: "..Statics/Media/canciones/cancion3/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion3/artista.jpg",
             descripcion: "Referente canadiense del progressive house y la música electrónica de club, famoso por su máscara de ratón."
         },
         {
             id: "a33",
             artista: "Foster The People",
-            imagen: "..Statics/Media/canciones/cancion46/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion46/artista.jpg",
             descripcion: "Indie pop bailable, letras introspectivas y ritmos pegajosos."
         },
         {
             id: "a34",
             artista: "ONE OK ROCK",
-            imagen: "../Statics/Media/canciones/cancion49/artista.jpg",
+            imagen: "..//Statics/Media/canciones/cancion49/artista.jpg",
             descripcion: "Rock japonés emotivo, enérgico y con influencia occidental."
         },
         {
             id: "a35",
             artista: "The Chemical Brothers",
-            imagen: "..Statics/Media/canciones/cancion48/artista.jpg",
+            imagen: "../Statics/Media/canciones/cancion48/artista.jpg",
             descripcion: "Electrónica psicodélica, potente, con bases rítmicas experimentales."
         }
     ]

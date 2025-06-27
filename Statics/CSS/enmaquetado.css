@@ -186,6 +186,56 @@ section div img{
     flex-direction: column;/*los items se acomodan en columna*/
 }
 
+#contenedorPaddre{
+    background-color: red;
+    width: 100%;
+    height: 100%;
+}
+
+#contenedorCancionesBtn{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-y: auto ;
+    margin: 5px;
+}
+
+#contenedorART{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-y: auto ;
+    margin: 5px;
+
+}
+
+#botonesBuscador{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    height: 30px;
+}
+.botoncito{
+    display: flex;
+    font-family: "Jersey10",sans-serif;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 20px;
+    background-color: rgba(0, 0, 255, 0.5) ;
+    border-radius: 15px;
+    color: #C6CE00;
+    min-width: 120px;
+    padding: 1em;
+    text-align: center;
+    
+}
+
 /*contenedor para separar la escritura de busqueda*/
 .contenedorescribbuscador
 {
@@ -216,19 +266,19 @@ section div img{
 .btnBuscadorB
 {
     display: inline;
-    width: 60px;
-    height: 70px;
-    font-size: 5px;
+    width: 120px;
+    height: 140px;
+    font-size: 15px;
     font-family: 'Arial Narrow';
-    background-color: #0000009b;
+    background-color: #fefefe78;
     border-color: #222222;
-    border-width: 8px;
-    border-left: 8px;
-    border-right: 8px;
-    border-top: 8px;
-    border-radius: 10px;
+    border-width: 16px;
+    border-left: 16px;
+    border-right: 16px;
+    border-top: 16px;
+    border-radius: 15px;
     border: solid;
-    padding-left: 15PX;
+    padding-left: 30PX;
     transition-property:all ;
     transition-duration: 1s;
     transition-delay: 2s ;
@@ -236,16 +286,16 @@ section div img{
 .btnBuscadorB:hover
 {
     background-color: #5e0e83;
-    width: 100px;
-    height: 100px;
-    font-size: 20px ;
+    width: 200px;
+    height: 200px;
+    font-size: 40px ;
 }
 /*imagenes de los botones de busqueda de las canciones*/
 .btnBuscadorI
 {
     display: flex;
-    width: 30px;
-    height: 30px; 
+    width: 60px;
+    height: 60px; 
     justify-content: center;
     transition-property:all ;
     transition-duration: 1s;
@@ -255,8 +305,8 @@ section div img{
 .btnBuscadorI:hover
 {
     background-color: #5e0e83;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
 }
 
 .contenedorArt
@@ -269,21 +319,21 @@ section div img{
 {
     display: flex;
     display: inline;
-    width: 50px;
-    height: 50px;
-    font-size: 5px;
+    width: 110px;
+    height: 120px;
+    font-size: 13px;
     font-family: 'Arial Narrow';
-    background-color: #2b30ba52;
+    background-color: #ffffff5a;
     flex-direction: column;
     align-items: center;
     border-color: #222222;
-    border-width: 5px;
-    border-left: 5px;
-    border-right: 5px;
-    border-top: 5px;
-    border-radius: 40px;
+    border-width: 10px;
+    border-left: 10px;
+    border-right: 10px;
+    border-top: 10px;
+    border-radius: 50px;
     border: solid;
-    padding-left: 10PX;
+    padding-left: 15PX;
     justify-content: space-around;
     transition-property:all ;
     transition-duration: 1s;
@@ -292,16 +342,16 @@ section div img{
 .btnArtB:hover
 {
     background-color: #162fba;
-    width: 100px;
-    height: 100px;
-    font-size: 20px ;
+    width: 200px;
+    height: 200px;
+    font-size: 40px ;
 }
 /*imagenes de los botones de busqueda de artistas*/
 .btnArtI
 {
     display: flex;
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
     justify-content: space-around;
     transition-property:all ;
     transition-duration: 1s;
@@ -309,9 +359,16 @@ section div img{
 }
 .btnArtI:hover
 {
-    width: 100px;
-    height: 100px;
-    font-size: 20px ;
+    width: 200px;
+    height: 200px;
+    font-size: 40px ;
+}
+#contenedorPlaylist {
+    border-style: solid;
+    border-color: white;
+    color: rgb(37, 209, 37);
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
 }
 
 #pantallaPlaylist {

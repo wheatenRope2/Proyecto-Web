@@ -53,26 +53,34 @@
     <main id="pantallaBuscador" style="display: none;"> 
         <article class="contenedorescribbuscador" id="contenedorescribbuscador">
             <!--contenedor para establecer el buscador-->
-        <nav id="contenedorBuscador">
-            <label for="buscador">Buscar</label>
-            <input type="text" id="buscador" name="buscador" placeholder="Buscar">
-        </article>
-            <br>
-            <article class="contenedorBtn" id="contenedorCancionesBtn">
-                <!--contenedor para establecer los botones de canciones-->
-                <div id="lista-canciones"></div>
-            
-                <br>
-                <article class="contenedorArt" id="contenedorART"><h1 style="color: aliceblue;">Artistas</h1>
-                    <!--contenedor para mostrar botones de artistas-->
-                    <div id="lista-artistas"></div>
-                    <div class="video-responsive">
-                    <header>
-                    <i class="fa-brands fa-youtube" style="color: var(--primary-color);"></i>
-            </article>
-            </article>
+            <nav id="contenedorBuscador">
+                <label for="buscador">Buscar</label>
+                <input type="text" id="buscador" name="buscador" placeholder="Buscar">
+            </nav>
+            <br><br>
+            <div id="botonesBuscador">
+                <button class="botoncito" id="listaCanciones">Canciones</button>
+                <button class="botoncito" id="listaArtistas">Artistas</button>
             </div>
-        </nav>
+        </article id="contenedorPadre">
+        <br>
+        <article class="contenedorBtn" id="contenedorCancionesBtn">
+            <!--contenedor para establecer los botones de canciones-->
+            <article id="musicContainer" style="display: none;">
+                <div id="lista-canciones"></div>         
+
+            </article>
+            <br>
+            <article class="contenedorArt" id="contenedorART"style="display: none;">
+                <!--contenedor para mostrar botones de artistas-->
+                <div id="lista-artistas"></div>
+            </article>
+        </article>
+
+            <div class="video-responsive">
+                <header>
+                <i class="fa-brands fa-youtube" style="color: var(--primary-color);"></i>
+            </div>
         <br><br>
     </main><br>
 

@@ -7,6 +7,10 @@ let pantallaInicio = document.getElementById("pantallaInicio");
 let pantallaPlaylist = document.getElementById("pantallaPlaylist");
 let pantallaBuscador = document.getElementById("pantallaBuscador");
 let pantallaCreditos = document.getElementById("pantallaCreditos");
+let btnCanciones = document.getElementById("listaCanciones");
+let btnArtistas = document.getElementById("listaArtistas");
+let contenedorArt = document.getElementById("contenedorART");
+let musicContainer = document.getElementById("musicContainer");
 
 let botonInicio = document.getElementById("botonInicio")
 botonInicio.addEventListener("click", ()=>{
@@ -55,6 +59,18 @@ let botonCreditos = document.getElementById("creditos").addEventListener("click"
     pantallaCreditos.style.display = "flex";
     
 });
+
+btnCanciones.addEventListener("click", ()=>{
+    musicContainer.style.display="flex";
+    contenedorArt.style.display="none";
+    console.log("presionado");
+})
+
+btnArtistas.addEventListener("click", ()=>{
+    musicContainer.style.display="none";
+    contenedorArt.style.display="flex";
+    console.log("presionado");
+})
 
 
 function setupCarrusel(btnIzqId, btnDerId, carruselId, claseCuadro){
