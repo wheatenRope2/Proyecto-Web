@@ -6,25 +6,23 @@ const inputP = document.getElementById("playlistInput");
 const listaCancionP = document.getElementById("playlist-canciones");
 const listaArtistaP = document.getElementById("playlist-artistas");
 
+let iniciarPlaylist = document.getElementById("iniciarPlaylist");
+let siguientePlaylist = document.getElementById("cancionSiguiente");
+let anteriorPlaylist = document.getElementById("cancionAnterior");
+
 function mostrarCancionesP(filtradasCancion) 
 {
   listaCancionP.innerHTML = "";
   filtradasCancion.forEach(cancion => 
   {
     let lica = document.createElement("button");
-    lica.id = `${cancion.nombre}`;
+    lica.nombre = `${cancion.nombre}`;
+    lica.link=`${cancion.link}`;
     lica.textContent = `${cancion.nombre}`;
-    console.log(cancion);
-    console.log(cancion.nombre);
-    console.log(lica);
+    lica.id = `${cancion.id}`;
     lica.addEventListener("click", () => 
     {
-        if (player && typeof player.destroy === "function") 
-        {
-        //    player.destroy();
-        }
-        player.loadVideoById(cancion.link);
-        console.log(cancion.link);
+        agregarInicio(lica);
     });
     listaCancionP.appendChild(lica);
   });
@@ -41,17 +39,72 @@ inputP.addEventListener("keyup", () =>
 
 mostrarCancionesP(datosPlaylist.canciones);
 
+//Reproducir inicio de la Playlist
+let indiceActual = 0;
+
+function reproducirActual(){
+    const cancion = playlist[indiceActual];
+    player.loadVideoById(cancion.link);
+}
+
+iniciarPlaylist.addEventListener("click", ()=>{
+    reproducirActual();
+});
+
+function reproducirSiguiente(){
+    if (indiceActual<playlist.length-1){
+        indiceActual++;
+        reproducirActual();
+    }
+    else
+        if(indiceActual>playlist.length-1){
+            indiceActual=0;
+            reproducirActual();
+        }
+}
+siguientePlaylist.addEventListener("click", ()=>{
+    reproducirSiguiente();
+})
+
+function reproducirAnterior(){
+    if (indiceActual>0){
+        indiceActual--;
+        reproducirActual();
+    }
+    else
+        if(indiceActual<0){
+            indiceActual=playlist.length;
+            reproducirActual();
+        }
+}
+anteriorPlaylist.addEventListener("click", ()=>{
+    reproducirAnterior();
+})
+
 
 //Muestra y actualiza la playlist
 function renderizarPlaylist() {
     lista.innerHTML = "";
     playlist.forEach((cancion, index)=> {
         const li = document.createElement("li");
-        li.textContent = `${index + 1}. ${cancion}`;
+        const btnEliminar = document.createElement("button");
+        btnEliminar.id=`${index}`;
+        btnEliminar.textContent = "eliminar";
+        btnEliminar.class = "eliminar";
+        li.textContent = `${index + 1}. ${cancion.nombre}`;
         lista.appendChild(li);
+        lista.appendChild(btnEliminar);
+        btnEliminar.addEventListener("click", ()=>{
+            eliminarCancion(btnEliminar.id)
+        })
+
     });
 }
 
+function eliminarCancion(btnEliminar){
+    playlist.splice(btnEliminar, 1);
+    renderizarPlaylist();
+}
 
 function obtenerInput() {
     return document.getElementById("nuevaCancion").value.trim();
@@ -68,9 +121,10 @@ function quitarFinal() {
     renderizarPlaylist();
 }
 
-function agregarInicio() {
-    const cancion = obtenerInput();
-    if (cancion) playlist.unshift(cancion);
+function agregarInicio(lica) {
+    const id = lica.id;
+    const cancion = datosPlaylist.canciones.find(x=>x.id==id);
+    if (cancion) playlist.push(cancion);
     renderizarPlaylist();
 }
 

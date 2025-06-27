@@ -55,3 +55,40 @@ let botonCreditos = document.getElementById("creditos").addEventListener("click"
     pantallaCreditos.style.display = "flex";
     
 });
+
+const cuadros = document.querySelectorAll(".cuadro-cancion");
+let indexCentro = 0;
+
+function actualizarCarrusel(){
+    cuadros.forEach((cuadro, i) => {
+        cuadro.style.zIndex = "0";
+        cuadro.style.opacity = "0";
+        cuadro.style.transform = "translateX(-50%) scale(0)";
+    });
+
+    const total = cuadros.length;
+    const mostrar = 3;
+
+    for(let offset = -mostrar; offset <= mostrar; offset++){
+        let idx = (indexCentro + offset + total) % total;
+        let cuadro = cuadros[idx];
+
+        let scale = 1 - Math.abs(offset) * 0.2;
+        let opacity = 1 - Math.abs(offset) * 0.3;
+        let translateX = offset * 100;
+
+        cuadro.style.transform = `translate(-50%, -50%) translateX(${offset * 100}%) scale(${scale})`;
+        cuadro.style.opacity = opacity;
+        cuadro.style.zIndex = 5 - Math.abs(offset);
+    }
+}
+
+function moverCarrusel(direccion){
+    indexCentro = (indexCentro + direccion + cuadros.length) % cuadros.length;
+    actualizarCarrusel();
+}
+
+document.getElementById("btnIzq").addEventListener("click", () => moverCarrusel(-1));
+document.getElementById("btnDer").addEventListener("click", () => moverCarrusel(1));
+
+actualizarCarrusel();

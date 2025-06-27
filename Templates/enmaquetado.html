@@ -36,9 +36,9 @@
                         <input type="range" min="0" max="100" value="0" id="seekBar">
                         </div>  
                 <div id="botonesReproductor">
-                    <button class="botonesControl">1</button>
+                    <button class="botonesControl" id="cancionAnterior">1</button>
                     <button class="botonPlayPausa">2</button>
-                    <button class="botonesControl">3</button>
+                    <button class="botonesControl" id="cancionSiguiente">3</button>
                     <br><br>
                 </div>
                 <div id="sliderReproductor">
@@ -49,9 +49,11 @@
         </section>
     </aside>
 
+    
+
     <!--Pantalla de Búsqueda-->
     <main id="pantallaBuscador" style="display: none;"> 
-        <nav id="contenedorBuscador">
+        <nav id="contenedorBuscador" style="display: none;">
             <label for="buscador">Buscar</label>
             <input type="text" id="buscador" name="buscador" placeholder="Buscar">
             <div id="lista-canciones"></div>
@@ -70,20 +72,42 @@
     <!--Pantalla de Inicio--> 
     <main id="pantallaInicio">
         <section id="contenedorInicio">
-            <article class="contenedor" id="contenedorCanciones">Canciones/carrusel</article>
+            <article class="contenedor" id="contenedorCanciones">
+                <h2 class="titulo-carrusel">Recomendaciones</h2>
+                <div class="envoltorio-carrusel">
+                    <button id="btnIzq" class="boton-carrusel">◀</button>
+                    <div id="carruselCanciones" class="carrusel">
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                    </div>
+                    <button id="btnDer" class="boton-carrusel">▶</button>
+                </div>
+            </article>
             <br><br>
             <article class="contenedor">Artistas</article>
             <br><br>
             <article class="contenedor">Cassetes</article>
         </section> 
     </main>
-
+ 
     <!--Pantalla de PlayList-->
     <main id="pantallaPlaylist" style="display: none;">
         <section id="contenedorPlaylist" class="contenedor" style="display: none;">
             <article>
                 <h2>Mi playlist</h2>
-                <ul>
+                <input type="text" id="playlistInput" placeholder="Añadir canción a la playlist">
+                <div id="playlist-canciones"></div>
+                <button id="iniciarPlaylist">▶️</button>
+                <br>
+                <ul id="playlist">
                     
                 </ul>
 
@@ -106,6 +130,9 @@
     </main>
 </body>
     <script src="https://youtube.com/iframe_api"></script>
-    <script src="../Dynamics/JS/buscador.js"></script>
     <script src="../Dynamics/JS/enmaquetado.js"></script>
+    <script src="../Dynamics/JS/playlist.js"></script>
+    <script src="../Dynamics/JS/buscador.js"></script>
+
+
 </html>
