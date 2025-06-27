@@ -21,28 +21,22 @@
                 <div id="reproductorVideo">
                     <div id="player"></div> <!-- Contenedor del reproductor de YouTube -->
                 </div>
-
-                        <div class="controls-bar">
-                        <button id="playPausebtn">⏸️</button> 
+                <div class="controls-bar"> 
+                    <div id="sliderVol">
                         <label for="volumeSlider">Volumen:</label>
                         <button type="text" id="muteBtn"></button> 
-                        <input type="range" max="100"  id="volumeSlider">
-
-                        <!-- <span class="time">
-                            <span id="currentTime">00:00</span>
-                            <span id="duration">00:00</span>
-                        </span> -->
+                        <input type="range" max="100"  id="volumeSlider" class="slider">
+                    </div>
+                    <div id="sliderDuracion">
                         <label for="seekBar">Duracion:</label>
-                        <input type="range" min="0" max="100" value="0" id="seekBar">
-                        </div>  
-                <div id="botonesReproductor">
-                    <button class="botonesControl" id="cancionAnterior">1</button>
-                    <button class="botonPlayPausa">2</button>
-                    <button class="botonesControl" id="cancionSiguiente">3</button>
-                    <br><br>
+                        <input type="range" min="0" max="100" value="0" class="slider" id="seekBar">
+                    </div>
                 </div>
-                <div id="sliderReproductor">
-                    <input type="range" min="0" max="100" value="50" class="slider" id="slider">
+                <div id="botonesReproductor">
+                    <button class="botonesControl" id="cancionAnterior"><|-</button>
+                    <button class="botonPlayPausa" id="playPausebtn">||</button>
+                    <!--cambios-->
+                    <button class="botonesControl" id="cancionSiguiente">-|></button>
                 </div>
             </article>
             
@@ -56,17 +50,15 @@
             <nav id="contenedorBuscador">
                 <label for="buscador">Buscar</label>
                 <input type="text" id="buscador" name="buscador" placeholder="Buscar">
-            </nav>
-            <br><br>
-            <div id="botonesBuscador">
                 <button class="botoncito" id="listaCanciones">Canciones</button>
                 <button class="botoncito" id="listaArtistas">Artistas</button>
-            </div>
-        </article id="contenedorPadre">
+            </nav>
+            <br><br>
+            
+        </article>
         <br>
-        <article class="contenedorBtn" id="contenedorCancionesBtn">
             <!--contenedor para establecer los botones de canciones-->
-            <article id="musicContainer" style="display: none;">
+            <article id="musicContainer" style="display: flex;">
                 <div id="lista-canciones"></div>         
 
             </article>
@@ -75,7 +67,6 @@
                 <!--contenedor para mostrar botones de artistas-->
                 <div id="lista-artistas"></div>
             </article>
-        </article>
 
             <div class="video-responsive">
                 <header>
@@ -103,35 +94,14 @@
                 <div class="envoltorio-carrusel">
                     <button id="btnIzqArtistas" class="boton-carrusel">◀</button>
                     <div id="carruselArtistas" class="carrusel">
-                        <div class="cuadro-artistas"></div>
-                        <div class="cuadro-artistas"></div>
-                        <div class="cuadro-artistas"></div>
-                        <div class="cuadro-artistas"></div>
-                        <div class="cuadro-artistas"></div>
-                        <div class="cuadro-artistas"></div>
-                        <div class="cuadro-artistas"></div>
-                        <div class="cuadro-artistas"></div>
-                        <div class="cuadro-artistas"></div>
-                        <div class="cuadro-artistas"></div>
+                        
                     </div>
                     <button id="btnDerArtistas" class="boton-carrusel">▶</button>
                 </div>
             </article>
             <br><br>
             <article class="contenedor" id="contenedorGeneros">
-                <h2 class="titulo-generos">Géneros</h2>
-                <div class="envoltorio-generos">
-                    <div class="fila-generos">
-                        <div class="cuadro-generos"></div>
-                        <div class="cuadro-generos"></div>
-                        <div class="cuadro-generos"></div>
-                        <div class="cuadro-generos"></div>
-                        <div class="cuadro-generos"></div>
-                        <div class="cuadro-generos"></div>
-                        <div class="cuadro-generos"></div>
-                        <div class="cuadro-generos"></div>
-                    </div>
-                </div>
+                
             </article>
         
         </section> 

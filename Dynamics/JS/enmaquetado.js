@@ -11,6 +11,7 @@ let btnCanciones = document.getElementById("listaCanciones");
 let btnArtistas = document.getElementById("listaArtistas");
 let contenedorArt = document.getElementById("contenedorART");
 let musicContainer = document.getElementById("musicContainer");
+let artistaCanciones = document.getElementById("artistaCanciones");
 
 let botonInicio = document.getElementById("botonInicio")
 botonInicio.addEventListener("click", ()=>{
@@ -63,81 +64,136 @@ let botonCreditos = document.getElementById("creditos").addEventListener("click"
 btnCanciones.addEventListener("click", ()=>{
     musicContainer.style.display="flex";
     contenedorArt.style.display="none";
-    console.log("presionado");
 })
 
 btnArtistas.addEventListener("click", ()=>{
-    musicContainer.style.display="none";
+    //musicContainer.style.display="none";
     contenedorArt.style.display="flex";
-    console.log("presionado");
 })
 
 
-function setupCarrusel(btnIzqId, btnDerId, carruselId, claseCuadro){
-    const cuadros = document.querySelectorAll(`#${carruselId} .${claseCuadro}`);
-    let indexCentro = 0;
-
-    function actualizarCarrusel(){
-        cuadros.forEach((cuadro) => {
-            cuadro.style.zIndex = "0";
-            cuadro.style.opacity = "0";
-            cuadro.style.transform = "translate(-50%, -50%) scale(0)";
-        });
-
-        const total = cuadros.length;
-        const mostrar = 4;
-
-        for(let offset = -mostrar; offset <= mostrar; offset++){
-            let idx = (indexCentro + offset +total) % total;
-            let cuadro = cuadros[idx];
-
-            let scale = 1 - Math.abs(offset) * 0.2;
-            let opacity = 1 - Math.abs(offset) * 0.3;
-
-            cuadro.style.transform = `translate(-50%, -50%) translateX(${offset * 100}%) scale(${scale})`;
-            cuadro.style.opacity = opacity;
-            cuadro.style.zIndex = 5 - Math.abs(offset);
-        }
-    }
-
-    function moverCarrusel(direccion){
-        indexCentro = (indexCentro + direccion + cuadros.length) % cuadros.length;
-        actualizarCarrusel();
-    }
-
-    document.getElementById(btnIzqId).addEventListener("click", () => moverCarrusel(-1));
-    document.getElementById(btnDerId).addEventListener("click", () => moverCarrusel(1));
-
-    actualizarCarrusel();
-}
-//Carruel con imagenes y funcional
 let ElementosCarrusel = [];
 let contenedor = document.getElementById("carruselCanciones");
 
 for (let i = 0; i <= 9; i++) 
 {
     ElementosCarrusel[i] = "c" + Math.floor(Math.random() * 50);
-
     let cuad = document.createElement("div");
     cuad.className = "cuadro-cancion";
     cuad.id = ElementosCarrusel[i];
-
-    let cancion = baseDatos.canciones.find(c => c.id === cuad.id);
+    let cancion = baseDatos.canciones.find((c) => c.id === cuad.id);
 
     if (cancion) 
-        {
+    {
         let imagec = document.createElement("img");
         imagec.src = cancion.imagen;
         cuad.appendChild(imagec);
-
         cuad.addEventListener("click", () => 
         {
             player.loadVideoById(cancion.link);
         });
-
         contenedor.appendChild(cuad);
-        console.log(cancion.link);
     }
 }
-setupCarrusel("btnIzq", "btnDer", "carruselCanciones", "cuadro-cancion");
-setupCarrusel("btnIzqArtistas", "btnDerArtistas", "carruselArtistas", "cuadro-artistas");
+
+
+let ElementosCarrusel2 = [];
+let contenedor2 = document.getElementById("carruselArtistas");
+
+for (let i = 0; i <= 9; i++) 
+{
+    ElementosCarrusel2[i] = "a" + Math.floor(Math.random() * 50);
+    let cuad2 = document.createElement("div");
+    cuad2.className = "cuadro-artista";
+    cuad2.id = ElementosCarrusel2[i];
+    let artistas = baseDatos.artistas.find((a) => a.id === cuad2.id);
+
+    if (artistas) 
+    {
+        let imagea = document.createElement("img");
+        imagea.src = artistas.imagen;
+        cuad2.appendChild(imagea);
+        cuad2.addEventListener("click", () => 
+        {
+            console.log(cuad2.id);
+            /*let a_id = cuad2.id;
+            let cancionesArtistas = datosBuscador.canciones.filter(x=>x.id_artista===a_id);
+            console.log(cancionesArtistas)
+            AmostrarCanciones(cancionesArtistas);  */
+        });
+        contenedor2.appendChild(cuad2);
+    }
+}
+
+/*
+function AmostrarCanciones(cancionesArtistas) 
+{
+  listaCancion.innerHTML = "";
+  cancionesArtistas.forEach(cancion => 
+  {
+    
+    let butc = document.createElement("button");
+    butc.id = `${cancion.nombre}`;
+    butc.className = "btnBuscadorB";/* clase para editar css 
+    let image = document.createElement("img");
+    image.src = `${cancion.imagen}`;
+    image.className = "btnBuscadorI";/* clase para editar img de btn 
+    butc.textContent = `${cancion.nombre}`;
+    listaCancion.appendChild(butc);
+    butc.appendChild(image);
+    butc.addEventListener("click", () => 
+    {
+        player.loadVideoById(cancion.link);
+    });
+  });
+}*/
+
+
+function setupCarrusel(nombreClase, btnIzqId, btnDerId) 
+{
+    const cuadros = document.querySelectorAll(`.${nombreClase}`);
+    let indexCentro = 0;
+
+    function actualizarCarrusel() 
+    {
+        cuadros.forEach((cuadro) => 
+        {
+            cuadro.style.zIndex = "0";
+            cuadro.style.opacity = "0";
+            cuadro.style.transform = "translate(-50%, -50%) scale(0)";
+        });
+
+        const total = cuadros.length;
+        const mostrar = 3;
+
+        for (let offset = -mostrar; offset <= mostrar; offset++) 
+        {
+            let idx = (indexCentro + offset + total) % total;
+            let cuadro = cuadros[idx];
+            let scale = 1 - Math.abs(offset) * 0.2;
+            let opacity = 1 - Math.abs(offset) * 0.3;
+            cuadro.style.transform = `translate(-50%, -50%) translateX(${offset * 100}%) scale(${scale})`;
+            cuadro.style.opacity = opacity;
+            cuadro.style.zIndex = 5 - Math.abs(offset);
+        }
+    }
+
+    function moverCarrusel(direccion) 
+    {
+        indexCentro = (indexCentro + direccion + cuadros.length) % cuadros.length;
+        actualizarCarrusel();
+    }
+
+    document.getElementById(btnIzqId).addEventListener("click", () => {
+        moverCarrusel(-1);
+    });
+
+    document.getElementById(btnDerId).addEventListener("click", () => {
+        moverCarrusel(1);
+    });
+
+    actualizarCarrusel();
+}
+
+setupCarrusel("cuadro-cancion", "btnIzq", "btnDer");
+setupCarrusel("cuadro-artista", "btnIzqArtistas", "btnDerArtistas");

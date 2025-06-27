@@ -48,7 +48,8 @@ function mostrarArtistas(filtradosArtista)
         console.log(buta.id);
         let a_id = buta.id;
         let filtradasCancionA = datosBuscador.canciones.filter(x=>x.id_artista===a_id);
-        mostrarCanciones(filtradasCancionA);    });
+        mostrarCanciones(filtradasCancionA);    
+    });
   });
 }
 
@@ -120,11 +121,11 @@ function onPlayerReady(event) {
 function onPlayerStateChange(event){
     if (event.data == YT.PlayerState.PLAYING) {
         // btnPausa.innerHTML = ICON_PAUSE;
-        playPauseBtn.textContent = "⏸️";
+        playPauseBtn.textContent = "||";
     } 
     else if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
         // reproduciendo = false;
-        playPauseBtn.textContent = "▶️";
+        playPauseBtn.textContent = "|>";
         // btnPausa.innerHTML = ICON_PLAY;
     }
     if (event.data === YT.PlayerState.ENDED) {
@@ -153,10 +154,10 @@ playPauseBtn.addEventListener("click", () => {
     let state = player.getPlayerState();
     if (state === YT.PlayerState.PLAYING) {
         player.pauseVideo();
-        playPauseBtn.textContent = "▶️";
+        playPauseBtn.textContent = "|>";
     } else {
         player.playVideo();
-        playPauseBtn.textContent = "⏸️";
+        playPauseBtn.textContent = "||";
     }
 });
 

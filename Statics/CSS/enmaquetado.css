@@ -98,39 +98,66 @@ html, body {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 10px;
     border-radius: 15px;
     padding: 1px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(44, 42, 44, 0.5);
 }
 
 .botonesControl {
     margin: 0 auto;
     background-color: #424040;
+    color:rgb(255, 255, 255);
     border-radius: 15px;
     border-style: none;
     width: 20%;   
+    height: 35px;
 }
 
 .botonPlayPausa {
-    background-color: rgb(182, 182, 11);
+    background-color: rgba(63, 77, 151, 0.745);
     border-radius: 50%;
+    color:rgb(255, 255, 255);
     border-style: none;
-    width: 25%;
+    width: 23%;
+    margin: 5px;
     aspect-ratio: 1 / 1; 
 }
 
 #sliderReproductor {
     display: flex;
     border-radius: 15px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(44, 42, 44, 0.5);
     padding: 0 1.5em 0 1.5em;
 }
 
 #sliderReproductor input {
     margin: 0 auto;
     width: 100%;
+}
+
+#sliderDuracion
+{
+    display: flex;
+    border-radius: 15px;
+    background-color: rgba(44, 42, 44, 0.5);
+    padding: 0 1.5em 0 1.5em;
+    margin-top: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: -4px;
+}
+
+#sliderVol
+{
+    display: flex;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    background-color: rgba(44, 42, 44, 0.5);
+    padding: 0 1.5em 0 1.5em;
 }
 
 section div img{
@@ -170,7 +197,8 @@ section div img{
 
 
 #reproductor button:hover {
-    background-color: yellow;
+    background-color: rgb(7, 7, 7);
+    cursor: pointer;
 }
 
 #pantallaBuscador {
@@ -205,12 +233,35 @@ section div img{
 #contenedorART{
     display: flex;
     height: 100%;
-    width: 100%;
-    max-width: 100%;
+    width: 90%;
+    background-color: rgba(0,0,0,0.5);
+    max-width: 90%;
     max-height: 100%;
     overflow-y: auto ;
-    margin: 5px;
+    border-style: solid;
+    border-color: #ffffff8d;
+    border-radius: 15px;
+    margin: 0 auto;
+}
 
+#musicContainer{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    background-color: rgba(0,0,0,0.5);
+    max-width: 90%;
+    max-height: 100%;
+    overflow-y: auto ;
+    border-style: solid;
+    border-color: #ffffff8d;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+#lista-canciones{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #botonesBuscador{
@@ -233,7 +284,11 @@ section div img{
     min-width: 120px;
     padding: 1em;
     text-align: center;
-    
+}
+.botoncito:hover{
+    cursor: pointer;
+    color: rgba(0, 0, 255, 0.5) ;
+    background-color: #C6CE00;;
 }
 
 /*contenedor para separar la escritura de busqueda*/
@@ -281,7 +336,7 @@ section div img{
     padding-left: 30PX;
     transition-property:all ;
     transition-duration: 1s;
-    transition-delay: 2s ;
+    transition-delay: .35s ;
 }
 .btnBuscadorB:hover
 {
@@ -289,6 +344,7 @@ section div img{
     width: 200px;
     height: 200px;
     font-size: 40px ;
+    cursor: pointer;
 }
 /*imagenes de los botones de busqueda de las canciones*/
 .btnBuscadorI
@@ -299,7 +355,7 @@ section div img{
     justify-content: center;
     transition-property:all ;
     transition-duration: 1s;
-    transition-delay: 2s ;
+    transition-delay: .35s ;
 
 }
 .btnBuscadorI:hover
@@ -307,6 +363,7 @@ section div img{
     background-color: #5e0e83;
     width: 100px;
     height: 100px;
+    cursor: pointer;
 }
 
 .contenedorArt
@@ -345,6 +402,7 @@ section div img{
     width: 200px;
     height: 200px;
     font-size: 40px ;
+    cursor: pointer;
 }
 /*imagenes de los botones de busqueda de artistas*/
 .btnArtI
@@ -362,6 +420,7 @@ section div img{
     width: 200px;
     height: 200px;
     font-size: 40px ;
+    cursor: pointer;
 }
 #contenedorPlaylist {
     border-style: solid;
@@ -398,8 +457,12 @@ section div img{
     padding: 10px;
     background-color: rgba(0,0,0,0.5);
 }
-#lista-Artistas{
-    position: sticky;
+#lista-artistas{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
 }
 
 #buscadorPlaylist {
@@ -496,6 +559,7 @@ section div img{
 .botonesPlaylist:hover {
     background-color: #C6CE00;
     color: rgba(0,0,255);
+    cursor: pointer;
 }
 
 .resultado{
@@ -576,6 +640,7 @@ section div img{
 
 .boton-carrusel:hover{
     background-color: #a63f98;
+    cursor: pointer;
 }
 
 .carrusel{
@@ -612,8 +677,8 @@ section div img{
 }
 
 .cuadro-artistas{
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background-color: #555;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
