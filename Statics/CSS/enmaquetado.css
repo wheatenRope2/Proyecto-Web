@@ -229,3 +229,72 @@ section div img{
     width: 100%;
     height: 100%;    
 }
+
+.titulo-carrusel{
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: "Jersey10";
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.cuadro-cancion:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: #df47ca;
+}
+
+.boton-carrusel{
+    background-color: #df47ca;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: "Jersey10";
+    box-shadow: 0 0 5px #000;
+    margin: 0 5px;
+}
+
+.boton-carrusel:hover{
+    background-color: #a63f98;
+}
+
+.carrusel{
+    display: flex;
+    overflow: hidden;
+    gap: 15px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cuadro-cancion{
+    width: 80px;
+    height: 80px;
+    background-color: #555;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+    transition: all 0.4s ease;
+    flex-shrink: 0;
+}
+
+.envoltorio-carrusel{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 85px;
+    gap: 10px;
+}

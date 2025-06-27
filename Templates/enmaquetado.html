@@ -78,6 +78,54 @@
 
             </article>
             <br><br>
+                </header>
+                <div id="player"></div>
+
+                <div class="controls-bar">
+                    <button id="playPausebtn">⏸️</button> 
+                    <label for="volumeSlider">Volumen:</label>
+                    <button type="text" id="muteBtn"></button> 
+                    <input type="range" max="100"  id="volumeSlider">
+
+                    <!-- <span class="time">
+                        <span id="currentTime">00:00</span>
+                        <span id="duration">00:00</span>
+                    </span> -->
+                    <label for="seekBar">Duracion:</label>
+                    <input type="range" min="0" max="100" value="0" id="seekBar">
+                </div>
+                
+                </div>
+        </nav>
+        <br><br>
+        <p>¿Qué vas a escuchar hoy?</p>   
+    </main><br>
+
+    <!--Pantalla de Inicio--> 
+    <main id="pantallaInicio">
+        <section id="contenedorInicio">
+            <article class="contenedor" id="contenedorCanciones">
+                <h2 class="titulo-carrusel">Recomendaciones</h2>
+                <div class="envoltorio-carrusel">
+                    <button id="btnIzq" class="boton-carrusel">◀</button>
+                    <div id="carruselCanciones" class="carrusel">
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                        <div class="cuadro-cancion"></div>
+                    </div>
+                    <button id="btnDer" class="boton-carrusel">▶</button>
+                </div>
+            </article>
+            <br><br>
+            <article class="contenedor">Artistas</article>
+            <br><br>
             <article class="contenedor">Cassetes</article>
         </section> 
     </main>
