@@ -73,6 +73,7 @@ Para este proyecto se emplearon las siguientes tecnologías:
 
 ## Integrantes y aportes
 | Integrante | Aportaciones |
+--------------|------------------------------
 |Alarcón Mia |Asesora y mentora del proyecto|
 -------------|------------------------------
 |Domínguez Jiménez Arturo Gabriel|Desarrollo de  cookies e interfaz|
