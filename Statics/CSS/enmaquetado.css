@@ -182,6 +182,15 @@ section div img{
     background-repeat: no-repeat;
     display: flex;
     border-radius: 15px;
+    align-items: flex-start;/*los items se ponen al inicio del contenedor*/
+    flex-direction: column;/*los items se acomodan en columna*/
+}
+
+/*contenedor para separar la escritura de busqueda*/
+.contenedorescribbuscador
+{
+    width: 250px;
+    height: 50px;
 }
 
 #contenedorBuscador {
@@ -194,16 +203,119 @@ section div img{
     border-radius: 15px;
     padding: 10px;
 }
+/*contenedor para la busqueda de canciones con img*/
+.contenedorBtn
+{
+    width: 900px;
+    height: 400px;
+    flex-direction: row;
+    display: flex;
 
-#contenedorPlaylist {
-    border-style: solid;
-    border-color: white;
-    color: rgb(37, 209, 37);
-    background-color: rgba(0,0,0,0.5);
-    width: 100%;
+}
+/*Botones de busqueda de canciones*/
+.btnBuscadorB
+{
+    display: inline;
+    width: 60px;
+    height: 70px;
+    font-size: 5px;
+    font-family: 'Arial Narrow';
+    background-color: #0000009b;
+    border-color: #222222;
+    border-width: 8px;
+    border-left: 8px;
+    border-right: 8px;
+    border-top: 8px;
+    border-radius: 10px;
+    border: solid;
+    padding-left: 15PX;
+    transition-property:all ;
+    transition-duration: 1s;
+    transition-delay: 2s ;
+}
+.btnBuscadorB:hover
+{
+    background-color: #5e0e83;
+    width: 100px;
+    height: 100px;
+    font-size: 20px ;
+}
+/*imagenes de los botones de busqueda de las canciones*/
+.btnBuscadorI
+{
+    display: flex;
+    width: 30px;
+    height: 30px; 
+    justify-content: center;
+    transition-property:all ;
+    transition-duration: 1s;
+    transition-delay: 2s ;
+
+}
+.btnBuscadorI:hover
+{
+    background-color: #5e0e83;
+    width: 50px;
+    height: 50px;
+}
+
+.contenedorArt
+{
+    width: 1300px;
+    height: 470px;
+}
+/*botones de busqueda de artistas*/
+.btnArtB
+{
+    display: flex;
+    display: inline;
+    width: 50px;
+    height: 50px;
+    font-size: 5px;
+    font-family: 'Arial Narrow';
+    background-color: #2b30ba52;
+    flex-direction: column;
+    align-items: center;
+    border-color: #222222;
+    border-width: 5px;
+    border-left: 5px;
+    border-right: 5px;
+    border-top: 5px;
+    border-radius: 40px;
+    border: solid;
+    padding-left: 10PX;
+    justify-content: space-around;
+    transition-property:all ;
+    transition-duration: 1s;
+    transition-delay: 2s ;
+}
+.btnArtB:hover
+{
+    background-color: #162fba;
+    width: 100px;
+    height: 100px;
+    font-size: 20px ;
+}
+/*imagenes de los botones de busqueda de artistas*/
+.btnArtI
+{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    justify-content: space-around;
+    transition-property:all ;
+    transition-duration: 1s;
+    transition-delay: 2s ;
+}
+.btnArtI:hover
+{
+    width: 100px;
+    height: 100px;
+    font-size: 20px ;
 }
 
 #pantallaPlaylist {
+    display: flex;
     width: 100%;
     height: 100%;
     background-image: url(../Media/FondoPlaylist.jpg);
@@ -211,7 +323,152 @@ section div img{
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
+    padding: 10px;
     border-radius: 15px;
+}
+
+#contenedorPlaylist {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 15px;
+    color: #C6CE00;
+    font-family: "Jersey10";
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+}
+#lista-Artistas{
+    position: sticky;
+}
+
+#buscadorPlaylist {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 35%;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #fff;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.5);
+    overflow-y: auto;
+}
+
+#playlistInput {
+    width: 100%;
+    max-height: 10%;
+}
+
+#playlist-canciones {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 100%;
+}
+
+#listaPlaylist {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 65%;
+    max-height: 100%;
+    border-style: solid;
+    border-color: #fff;
+    color: #C6CE00;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.5);
+    overflow-y: auto;
+}
+
+#listaPlaylist h2{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 3em;
+    justify-content: center;
+}
+
+#listaPlaylist li{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    list-style: none;
+    height: 30px;
+    border-radius: 15px;
+    line-height: 30px;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 2px;
+    background-color: rgba(0,0,255,0.5);
+    margin: 0 0 5px 0;
+}
+
+#playlist {
+    margin: 10px;
+}
+
+#botonesPlaylist {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.botonesPlaylist {
+    display: flex;
+    font-family: "Jersey10";
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    flex: 1 1 20px;
+    background-color: rgba(0,0,255,0.5);
+    border-radius: 15px;
+    color: #C6CE00;
+    min-width: 120px;
+    padding: 1em;
+    height: 20px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.botonesPlaylist:hover {
+    background-color: #C6CE00;
+    color: rgba(0,0,255);
+}
+
+.resultado{
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    border-style: none;
+    background-color: #fff;
+    color:#000;
+    text-align: center;
+    /*font-family: "Jersey10", sans-serif;*/
+    margin: 5px;
+    padding: 5px;
+
+}
+
+.eliminar{
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    border-style: none;
+    background-color: #ff0000;
+    color:#f5f5f5;
+    text-align: center;
+    font-family: "Jersey10", sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 10%;
+
+
 }
 
 #pantallaCreditos {
@@ -239,10 +496,12 @@ section div img{
     text-align: center;
 }
 
-.cuadro-cancion:hover{
-    transform: scale(1.05);
-    cursor: pointer;
-    background-color: #df47ca;
+.titulo-generos{
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: "Jersey10";
+    font-size: 1.8rem;
+    text-align: center;
 }
 
 .boton-carrusel{
@@ -276,6 +535,26 @@ section div img{
 }
 
 .cuadro-cancion{
+    width: 100px;
+    height: 100px;
+    background-color: #555;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+    transition: all 0.4s ease;
+    flex-shrink: 0;
+}
+.cuadro-cancion:hover{
+    cursor: pointer;
+    width: 110px;
+    height: 110px;
+}
+
+.cuadro-artistas{
     width: 80px;
     height: 80px;
     background-color: #555;
@@ -296,6 +575,41 @@ section div img{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 85px;
+    height: 150px;
     gap: 10px;
+}
+
+.fila-generos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+}
+
+.cuadro-generos{
+    width: 80px;
+    height: 80px;
+    background-color: #555;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: all 0.4s ease;
+    opacity: 1;
+    flex-shrink: 0;
+}
+
+.cuadro-generos:hover{
+    background-color: #df47ca;
+    cursor: pointer;
+    height: 90px;
+    width: 90px;
+}
+
+.envoltorio-generos{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

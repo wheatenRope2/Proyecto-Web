@@ -56,39 +56,72 @@ let botonCreditos = document.getElementById("creditos").addEventListener("click"
     
 });
 
-const cuadros = document.querySelectorAll(".cuadro-cancion");
-let indexCentro = 0;
 
-function actualizarCarrusel(){
-    cuadros.forEach((cuadro, i) => {
-        cuadro.style.zIndex = "0";
-        cuadro.style.opacity = "0";
-        cuadro.style.transform = "translateX(-50%) scale(0)";
-    });
+function setupCarrusel(btnIzqId, btnDerId, carruselId, claseCuadro){
+    const cuadros = document.querySelectorAll(`#${carruselId} .${claseCuadro}`);
+    let indexCentro = 0;
 
-    const total = cuadros.length;
-    const mostrar = 3;
+    function actualizarCarrusel(){
+        cuadros.forEach((cuadro) => {
+            cuadro.style.zIndex = "0";
+            cuadro.style.opacity = "0";
+            cuadro.style.transform = "translate(-50%, -50%) scale(0)";
+        });
 
-    for(let offset = -mostrar; offset <= mostrar; offset++){
-        let idx = (indexCentro + offset + total) % total;
-        let cuadro = cuadros[idx];
+        const total = cuadros.length;
+        const mostrar = 4;
 
-        let scale = 1 - Math.abs(offset) * 0.2;
-        let opacity = 1 - Math.abs(offset) * 0.3;
-        let translateX = offset * 100;
+        for(let offset = -mostrar; offset <= mostrar; offset++){
+            let idx = (indexCentro + offset +total) % total;
+            let cuadro = cuadros[idx];
 
-        cuadro.style.transform = `translate(-50%, -50%) translateX(${offset * 100}%) scale(${scale})`;
-        cuadro.style.opacity = opacity;
-        cuadro.style.zIndex = 5 - Math.abs(offset);
+            let scale = 1 - Math.abs(offset) * 0.2;
+            let opacity = 1 - Math.abs(offset) * 0.3;
+
+            cuadro.style.transform = `translate(-50%, -50%) translateX(${offset * 100}%) scale(${scale})`;
+            cuadro.style.opacity = opacity;
+            cuadro.style.zIndex = 5 - Math.abs(offset);
+        }
     }
-}
 
-function moverCarrusel(direccion){
-    indexCentro = (indexCentro + direccion + cuadros.length) % cuadros.length;
+    function moverCarrusel(direccion){
+        indexCentro = (indexCentro + direccion + cuadros.length) % cuadros.length;
+        actualizarCarrusel();
+    }
+
+    document.getElementById(btnIzqId).addEventListener("click", () => moverCarrusel(-1));
+    document.getElementById(btnDerId).addEventListener("click", () => moverCarrusel(1));
+
     actualizarCarrusel();
 }
+//Carruel con imagenes y funcional
+let ElementosCarrusel = [];
+let contenedor = document.getElementById("carruselCanciones");
 
-document.getElementById("btnIzq").addEventListener("click", () => moverCarrusel(-1));
-document.getElementById("btnDer").addEventListener("click", () => moverCarrusel(1));
+for (let i = 0; i <= 9; i++) 
+{
+    ElementosCarrusel[i] = "c" + Math.floor(Math.random() * 50);
 
-actualizarCarrusel();
+    let cuad = document.createElement("div");
+    cuad.className = "cuadro-cancion";
+    cuad.id = ElementosCarrusel[i];
+
+    let cancion = baseDatos.canciones.find(c => c.id === cuad.id);
+
+    if (cancion) 
+        {
+        let imagec = document.createElement("img");
+        imagec.src = cancion.imagen;
+        cuad.appendChild(imagec);
+
+        cuad.addEventListener("click", () => 
+        {
+            player.loadVideoById(cancion.link);
+        });
+
+        contenedor.appendChild(cuad);
+        console.log(cancion.link);
+    }
+}
+setupCarrusel("btnIzq", "btnDer", "carruselCanciones", "cuadro-cancion");
+setupCarrusel("btnIzqArtistas", "btnDerArtistas", "carruselArtistas", "cuadro-artistas");

@@ -9,6 +9,8 @@ const listaArtistaP = document.getElementById("playlist-artistas");
 let iniciarPlaylist = document.getElementById("iniciarPlaylist");
 let siguientePlaylist = document.getElementById("cancionSiguiente");
 let anteriorPlaylist = document.getElementById("cancionAnterior");
+let shuffleBtn = document.getElementById("shuffle");
+let deleteBtn = document.getElementById("eliminarPlaylist");
 
 function mostrarCancionesP(filtradasCancion) 
 {
@@ -16,6 +18,7 @@ function mostrarCancionesP(filtradasCancion)
   filtradasCancion.forEach(cancion => 
   {
     let lica = document.createElement("button");
+    lica.className="resultado";
     lica.nombre = `${cancion.nombre}`;
     lica.link=`${cancion.link}`;
     lica.textContent = `${cancion.nombre}`;
@@ -31,6 +34,12 @@ function mostrarCancionesP(filtradasCancion)
 inputP.addEventListener("keyup", () => 
 {
   let textoCancionP = inputP.value.toLowerCase();
+  if(textoCancionP.trim()===""){
+    listaCancionP.style.display="none";
+  }
+  if (textoCancionP.trim()!=""){
+    listaCancionP.style.display="flex";
+  }
   let filtradasCancionP = datosPlaylist.canciones.filter(c =>
     c.nombre.toLowerCase().includes(textoCancionP)
   );
@@ -89,8 +98,8 @@ function renderizarPlaylist() {
         const li = document.createElement("li");
         const btnEliminar = document.createElement("button");
         btnEliminar.id=`${index}`;
-        btnEliminar.textContent = "eliminar";
-        btnEliminar.class = "eliminar";
+        btnEliminar.textContent = "-";
+        btnEliminar.className = "eliminar";
         li.textContent = `${index + 1}. ${cancion.nombre}`;
         lista.appendChild(li);
         lista.appendChild(btnEliminar);
@@ -101,38 +110,23 @@ function renderizarPlaylist() {
     });
 }
 
+//Modo aleatoreo
+function shuffle(){
+    for(let i = playlist.length-1; i>0; i--){
+        const x = Math.floor(Math.random()*(i+1));
+        [playlist[i], playlist[x]]=[playlist[x], playlist[i]];
+    }
+    renderizarPlaylist();
+}
+shuffleBtn.addEventListener("click", ()=>{
+    shuffle();
+})
+
+//Eliminar una canción
 function eliminarCancion(btnEliminar){
     playlist.splice(btnEliminar, 1);
     renderizarPlaylist();
 }
-
-function obtenerInput() {
-    return document.getElementById("nuevaCancion").value.trim();
-}
-
-function agregarFinal() {
-    const cancion = obtenerInput();
-    if (cancion) playlist.push(cancion);
-    renderizarPlaylist();
-}
-
-function quitarFinal() {
-    playlist.pop();
-    renderizarPlaylist();
-}
-
-function agregarInicio(lica) {
-    const id = lica.id;
-    const cancion = datosPlaylist.canciones.find(x=>x.id==id);
-    if (cancion) playlist.push(cancion);
-    renderizarPlaylist();
-}
-
-function quitarInicio() {
-    playlist.shift();
-    renderizarPlaylist();
-}
-
 function usarSplice() {
     const cancion = obtenerInput();
     const index = parseInt(document.getElementById("indiceSplice").value);
@@ -147,4 +141,28 @@ function usarSplice() {
         renderizarPlaylist();
     }
 }
+
+//Agregar una canción al inicio
+function agregarInicio(lica) {
+    const id = lica.id;
+    const cancion = datosPlaylist.canciones.find(x=>x.id==id);
+    if (cancion) playlist.push(cancion);
+    renderizarPlaylist();
+}
+
+function quitarInicio() {
+    playlist.shift();
+    renderizarPlaylist();
+}
+
+//Eliminar arreglo completo
+
+function borrarTodo(){
+    playlist=[];
+    renderizarPlaylist();
+}
+
+deleteBtn.addEventListener("click", ()=>{
+    borrarTodo();
+})
 

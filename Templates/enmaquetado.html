@@ -49,21 +49,28 @@
         </section>
     </aside>
 
-    
-
     <!--Pantalla de Búsqueda-->
     <main id="pantallaBuscador" style="display: none;"> 
-        <nav id="contenedorBuscador" style="display: none;">
+        <article class="contenedorescribbuscador" id="contenedorescribbuscador">
+            <!--contenedor para establecer el buscador-->
+        <nav id="contenedorBuscador">
             <label for="buscador">Buscar</label>
             <input type="text" id="buscador" name="buscador" placeholder="Buscar">
-            <div id="lista-canciones"></div>
+        </article>
             <br>
-            <div id="lista-artistas"></div>
-                <div class="video-responsive">
-                <header>
-                <i class="fa-brands fa-youtube" style="color: var(--primary-color);"></i>
-                
-                
+            <article class="contenedorBtn" id="contenedorCancionesBtn">
+                <!--contenedor para establecer los botones de canciones-->
+                <div id="lista-canciones"></div>
+            
+                <br>
+                <article class="contenedorArt" id="contenedorART"><h1 style="color: aliceblue;">Artistas</h1>
+                    <!--contenedor para mostrar botones de artistas-->
+                    <div id="lista-artistas"></div>
+                    <div class="video-responsive">
+                    <header>
+                    <i class="fa-brands fa-youtube" style="color: var(--primary-color);"></i>
+            </article>
+            </article>
             </div>
         </nav>
         <br><br>
@@ -77,36 +84,69 @@
                 <div class="envoltorio-carrusel">
                     <button id="btnIzq" class="boton-carrusel">◀</button>
                     <div id="carruselCanciones" class="carrusel">
-                        <div class="cuadro-cancion"></div>
-                        <div class="cuadro-cancion"></div>
-                        <div class="cuadro-cancion"></div>
-                        <div class="cuadro-cancion"></div>
-                        <div class="cuadro-cancion"></div>
-                        <div class="cuadro-cancion"></div>
-                        <div class="cuadro-cancion"></div>
-                        <div class="cuadro-cancion"></div>
-                        <div class="cuadro-cancion"></div>
-                        <div class="cuadro-cancion"></div>
+                        
                     </div>
                     <button id="btnDer" class="boton-carrusel">▶</button>
                 </div>
             </article>
             <br><br>
-            <article class="contenedor">Artistas</article>
+            <article class="contenedor" id="contenedorArtistas">
+                <h2 class="titulo-carrusel">Artistas</h2>
+                <div class="envoltorio-carrusel">
+                    <button id="btnIzqArtistas" class="boton-carrusel">◀</button>
+                    <div id="carruselArtistas" class="carrusel">
+                        <div class="cuadro-artistas"></div>
+                        <div class="cuadro-artistas"></div>
+                        <div class="cuadro-artistas"></div>
+                        <div class="cuadro-artistas"></div>
+                        <div class="cuadro-artistas"></div>
+                        <div class="cuadro-artistas"></div>
+                        <div class="cuadro-artistas"></div>
+                        <div class="cuadro-artistas"></div>
+                        <div class="cuadro-artistas"></div>
+                        <div class="cuadro-artistas"></div>
+                    </div>
+                    <button id="btnDerArtistas" class="boton-carrusel">▶</button>
+                </div>
+            </article>
             <br><br>
-            <article class="contenedor">Cassetes</article>
+            <article class="contenedor" id="contenedorGeneros">
+                <h2 class="titulo-generos">Géneros</h2>
+                <div class="envoltorio-generos">
+                    <div class="fila-generos">
+                        <div class="cuadro-generos"></div>
+                        <div class="cuadro-generos"></div>
+                        <div class="cuadro-generos"></div>
+                        <div class="cuadro-generos"></div>
+                        <div class="cuadro-generos"></div>
+                        <div class="cuadro-generos"></div>
+                        <div class="cuadro-generos"></div>
+                        <div class="cuadro-generos"></div>
+                    </div>
+                </div>
+            </article>
+        
         </section> 
     </main>
  
     <!--Pantalla de PlayList-->
+    
     <main id="pantallaPlaylist" style="display: none;">
         <section id="contenedorPlaylist" class="contenedor" style="display: none;">
-            <article>
-                <h2>Mi playlist</h2>
-                <input type="text" id="playlistInput" placeholder="Añadir canción a la playlist">
-                <div id="playlist-canciones"></div>
-                <button id="iniciarPlaylist">▶️</button>
-                <br>
+            <article id="buscadorPlaylist">
+                <input type="text" id="playlistInput" placeholder="Añade algo a la playlist" >
+                <div id="playlist-canciones" style="display: none;"></div>
+                <br><br>
+            </article>
+            <article id="listaPlaylist">
+                <div><h2>Mi playlist</h2></div>
+                <br><br>
+                <article id="botonesPlaylist">    
+                    <button class="botonesPlaylist" id="iniciarPlaylist">Play</button>
+                    <button class="botonesPlaylist" id="shuffle">Shuffle</button>
+                    <button class="botonesPlaylist" id="eliminarPlaylist">Delete All</button>
+                </article>    
+                <br><br>
                 <ul id="playlist">
                     
                 </ul>

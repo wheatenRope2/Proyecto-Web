@@ -4,6 +4,7 @@ const listaCancion = document.getElementById("lista-canciones");
 const listaArtista = document.getElementById("lista-artistas");
 const datosBuscador = baseDatos;
 
+
 function mostrarCanciones(filtradasCancion) 
 {
   listaCancion.innerHTML = "";
@@ -12,8 +13,10 @@ function mostrarCanciones(filtradasCancion)
     
     let butc = document.createElement("button");
     butc.id = `${cancion.nombre}`;
+    butc.className = "btnBuscadorB";/* clase para editar css */
     let image = document.createElement("img");
     image.src = `${cancion.imagen}`;
+    image.className = "btnBuscadorI";/* clase para editar img de btn */
     butc.textContent = `${cancion.nombre}`;
     listaCancion.appendChild(butc);
     butc.appendChild(image);
@@ -23,6 +26,8 @@ function mostrarCanciones(filtradasCancion)
     });
   });
 }
+
+
 function mostrarArtistas(filtradosArtista) 
 {
   listaArtista.innerHTML = "";
@@ -30,18 +35,23 @@ function mostrarArtistas(filtradosArtista)
   filtradosArtista.forEach(artista => 
   {
     let buta = document.createElement("button");
-    buta.id = `${artista.artista}`;
+    buta.id = `${artista.id}`;
     buta.textContent = `${artista.artista}`;
-    let imagea = document.createElement("img");
+    buta.className = "btnArtB";//clase para editar en css btn del artista
+    let imagea = document.createElement("img"); 
     imagea.src = `${artista.imagen}`;
+    imagea.className = "btnArtI"; //clase para editar img del artista
     listaArtista.appendChild(buta);
     buta.appendChild(imagea);
     buta.addEventListener("click", () => 
     {
-      console.log(`${artista.id}`);
-    });
+        console.log(buta.id);
+        let a_id = buta.id;
+        let filtradasCancionA = datosBuscador.canciones.filter(x=>x.id_artista===a_id);
+        mostrarCanciones(filtradasCancionA);    });
   });
 }
+
 input.addEventListener("keyup", () => 
 {
   let textoCancion = input.value.toLowerCase();
@@ -180,3 +190,4 @@ seekBar.addEventListener("input", () => {
     console.log("AA")
     player.seekTo(seekTo, true);
 });
+
